@@ -3,16 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Painel Admin | Ronaldo Tecnologia</title>
+  <title>Console RT | Ronaldo Tecnologia</title>
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#020713">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" href="assets/css/rt-console.css">
 </head>
 <body>
-  <div class="admin-shell">
+  <section class="gate-screen" data-gate>
+    <form class="gate-card" data-gate-form>
+      <a class="admin-brand" href="index.html" aria-label="Ronaldo Tecnologia">
+        <span class="admin-mark">R</span>
+        <span><strong>Ronaldo Tecnologia</strong><small>Console privado</small></span>
+      </a>
+      <div>
+        <span class="admin-kicker">Acesso restrito</span>
+        <h1>Entrar no console do site</h1>
+        <p>Digite a chave privada do painel para liberar o editor visual. O token do GitHub só será solicitado depois desta etapa.</p>
+      </div>
+      <label>
+        Chave de acesso
+        <input type="password" data-field="access-key" autocomplete="off" placeholder="RT-...">
+      </label>
+      <button class="primary-btn" type="submit">Liberar painel</button>
+      <p class="gate-error" data-gate-error hidden>Chave inválida.</p>
+    </form>
+  </section>
+
+  <div class="admin-shell" data-admin-app hidden>
     <aside class="admin-sidebar">
-      <a class="admin-brand" href="admin.html" aria-label="Painel Ronaldo Tecnologia">
+      <a class="admin-brand" href="rt-console.html" aria-label="Painel Ronaldo Tecnologia">
         <span class="admin-mark">R</span>
         <span><strong>Ronaldo Tecnologia</strong><small>Painel Administrativo</small></span>
       </a>
@@ -46,23 +66,16 @@
       </header>
 
       <section class="setup-panel">
-        <div class="setup-grid">
+        <div class="setup-grid secure-grid">
           <label>
             Token do GitHub
             <input type="password" data-field="token" autocomplete="off" placeholder="github_pat_...">
           </label>
-          <label>
-            Usuário/organização
-            <input data-field="owner" value="ronaldojunio896">
-          </label>
-          <label>
-            Repositório
-            <input data-field="repo" value="revenda">
-          </label>
-          <label>
-            Branch
-            <input data-field="branch" value="main">
-          </label>
+          <div class="locked-target" aria-label="Destino fixo de publicação">
+            <span>Destino fixo</span>
+            <strong>Ronaldo Tecnologia · produção</strong>
+            <small>Repositório e branch não são editáveis pelo navegador.</small>
+          </div>
           <button class="primary-btn" type="button" data-action="connect">Conectar e carregar</button>
         </div>
       </section>
@@ -216,6 +229,6 @@
     </form>
   </dialog>
 
-  <script src="assets/js/admin.js" defer></script>
+  <script src="assets/js/rt-console.js" defer></script>
 </body>
 </html>

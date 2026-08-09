@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
+Disallow: /rt-console.html
 
 Sitemap: https://ronaldotecnologia.com.br/sitemap.xml

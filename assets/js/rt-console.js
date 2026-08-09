@@ -1,9 +1,16 @@
 (() => {
-  const state = {
-    token: "",
+  const CONFIG = Object.freeze({
     owner: "ronaldojunio896",
     repo: "revenda",
     branch: "main",
+    accessHash: "38b0f2515f1c152d37a29ba27a1199dbe381688955d27fa23ac513bed4c22af1"
+  });
+
+  const state = {
+    token: "",
+    owner: CONFIG.owner,
+    repo: CONFIG.repo,
+    branch: CONFIG.branch,
     page: "index.html",
     sha: "",
     doc: null,
@@ -13,15 +20,18 @@
     pendingImages: new Map(),
     pendingFiles: new Map(),
     dirty: false,
-    connected: false
+    connected: false,
+    appStarted: false
   };
 
   const els = {
+    gate: document.querySelector("[data-gate]"),
+    gateForm: document.querySelector("[data-gate-form]"),
+    gateInput: document.querySelector('[data-field="access-key"]'),
+    gateError: document.querySelector("[data-gate-error]"),
+    adminApp: document.querySelector("[data-admin-app]"),
     status: document.querySelector("[data-status]"),
     token: document.querySelector('[data-field="token"]'),
-    owner: document.querySelector('[data-field="owner"]'),
-    repo: document.querySelector('[data-field="repo"]'),
-    branch: document.querySelector('[data-field="branch"]'),
     page: document.querySelector('[data-field="page"]'),
     textFilter: document.querySelector('[data-field="text-filter"]'),
     textList: document.querySelector('[data-list="texts"]'),
@@ -64,10 +74,54 @@
 
   function getSettings() {
     state.token = els.token.value.trim();
-    state.owner = els.owner.value.trim() || "ronaldojunio896";
-    state.repo = els.repo.value.trim() || "revenda";
-    state.branch = els.branch.value.trim() || "main";
+    state.owner = CONFIG.owner;
+    state.repo = CONFIG.repo;
+    state.branch = CONFIG.branch;
     state.page = els.page.value;
+  }
+
+  async function sha256Hex(value) {
+    const bytes = new TextEncoder().encode(value.trim());
+    const hash = await crypto.subtle.digest("SHA-256", bytes);
+    return Array.from(new Uint8Array(hash))
+      .map((byte) => byte.toString(16).padStart(2, "0"))
+      .join("");
+  }
+
+  function startApp() {
+    if (state.appStarted) return;
+    state.appStarted = true;
+    els.gate.hidden = true;
+    els.adminApp.hidden = false;
+    bindEvents();
+    loadPage().catch((error) => log(error.message, "error"));
+  }
+
+  function initGate() {
+    if (sessionStorage.getItem("rt-console-unlocked") === CONFIG.accessHash) {
+      startApp();
+      return;
+    }
+
+    els.gateForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      els.gateError.hidden = true;
+
+      try {
+        const hash = await sha256Hex(els.gateInput.value);
+        if (hash !== CONFIG.accessHash) {
+          els.gateError.hidden = false;
+          els.gateInput.select();
+          return;
+        }
+
+        sessionStorage.setItem("rt-console-unlocked", CONFIG.accessHash);
+        startApp();
+      } catch (error) {
+        els.gateError.textContent = "Não foi possível validar a chave neste navegador.";
+        els.gateError.hidden = false;
+      }
+    });
   }
 
   function encodeBase64(text) {
@@ -659,6 +713,5 @@
     });
   }
 
-  bindEvents();
-  loadPage().catch((error) => log(error.message, "error"));
+  initGate();
 })();

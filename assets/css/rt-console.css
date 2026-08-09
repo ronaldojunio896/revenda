@@ -43,6 +43,50 @@ button {
   cursor: pointer;
 }
 
+[hidden] {
+  display: none !important;
+}
+
+.gate-screen {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+}
+
+.gate-card {
+  display: grid;
+  width: min(520px, 100%);
+  gap: 22px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.035)),
+    var(--panel);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.gate-card h1 {
+  margin: 6px 0 8px;
+  font-size: 34px;
+  line-height: 1.05;
+}
+
+.gate-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.gate-error {
+  border: 1px solid rgba(255, 77, 103, 0.34);
+  border-radius: var(--radius);
+  background: rgba(255, 77, 103, 0.1);
+  color: #ffb3bf !important;
+  padding: 10px 12px;
+}
+
 .admin-shell {
   display: grid;
   grid-template-columns: 270px minmax(0, 1fr);
@@ -239,6 +283,34 @@ menu button {
   grid-template-columns: minmax(220px, 1.3fr) repeat(3, minmax(140px, 0.7fr)) auto;
   gap: 12px;
   align-items: end;
+}
+
+.setup-grid.secure-grid {
+  grid-template-columns: minmax(260px, 1fr) minmax(260px, 0.9fr) auto;
+}
+
+.locked-target {
+  display: grid;
+  gap: 4px;
+  min-height: 61px;
+  border: 1px solid rgba(105, 233, 255, 0.24);
+  border-radius: var(--radius);
+  background: rgba(25, 215, 255, 0.065);
+  padding: 10px 12px;
+}
+
+.locked-target span,
+.locked-target small {
+  color: var(--muted);
+}
+
+.locked-target span {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.locked-target strong {
+  color: var(--text);
 }
 
 label {

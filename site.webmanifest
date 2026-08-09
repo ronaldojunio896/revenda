@@ -1,1 +1,24 @@
-{"name":"Ronaldo Tech","short_name":"Ronaldo Tech","start_url":"/","display":"standalone","background_color":"#050914","theme_color":"#050914","description":"Soluções digitais para empresas"}
+{
+  "name": "Ronaldo Tecnologia",
+  "short_name": "Ronaldo Tecnologia",
+  "description": "Soluções tecnológicas para empresas crescerem.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#020713",
+  "theme_color": "#020713",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#13b9ff"/><stop offset="1" stop-color="#1769ff"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="#07101d"/><rect x="7" y="7" width="50" height="50" rx="13" fill="url(#g)"/><text x="32" y="41" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="800" fill="white">RT</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ronaldo Tecnologia">
+  <defs>
+    <linearGradient id="g" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#69e9ff"/>
+      <stop offset="0.55" stop-color="#19d7ff"/>
+      <stop offset="1" stop-color="#1277ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#020713"/>
+  <path d="M16 16h22c7 0 12 4 12 10 0 5-3 8-8 10l10 12H39L29 36h-6v12H16V16Zm7 7v7h14c4 0 6-1 6-4s-2-3-6-3H23Z" fill="url(#g)"/>
+  <path d="M11 23h9M11 32h9M11 41h9" stroke="#69e9ff" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel Admin | Ronaldo Tecnologia</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#020713">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <a class="admin-brand" href="admin.html" aria-label="Painel Ronaldo Tecnologia">
+        <span class="admin-mark">R</span>
+        <span><strong>Ronaldo Tecnologia</strong><small>Painel Administrativo</small></span>
+      </a>
+
+      <nav class="admin-nav" aria-label="Navegação do painel">
+        <button class="active" type="button" data-tab-target="content"><span>▣</span>Conteúdo</button>
+        <button type="button" data-tab-target="texts"><span>✎</span>Textos</button>
+        <button type="button" data-tab-target="images"><span>▧</span>Imagens</button>
+        <button type="button" data-tab-target="blocks"><span>＋</span>Criar blocos</button>
+        <button type="button" data-tab-target="seo"><span>⌕</span>SEO</button>
+        <button type="button" data-tab-target="publish"><span>⇧</span>Publicar</button>
+      </nav>
+
+      <div class="admin-help">
+        <strong>Como publica?</strong>
+        <p>Use um token fino do GitHub com permissão de conteúdo no repositório. O token fica só nesta sessão do navegador.</p>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <span class="admin-kicker">GitHub Pages CMS</span>
+          <h1>Editor visual do site</h1>
+        </div>
+        <div class="admin-actions">
+          <span class="status-pill" data-status>Desconectado</span>
+          <button class="ghost-btn" type="button" data-action="reload-page">Recarregar página</button>
+          <button class="primary-btn" type="button" data-action="publish">Publicar site</button>
+        </div>
+      </header>
+
+      <section class="setup-panel">
+        <div class="setup-grid">
+          <label>
+            Token do GitHub
+            <input type="password" data-field="token" autocomplete="off" placeholder="github_pat_...">
+          </label>
+          <label>
+            Usuário/organização
+            <input data-field="owner" value="ronaldojunio896">
+          </label>
+          <label>
+            Repositório
+            <input data-field="repo" value="revenda">
+          </label>
+          <label>
+            Branch
+            <input data-field="branch" value="main">
+          </label>
+          <button class="primary-btn" type="button" data-action="connect">Conectar e carregar</button>
+        </div>
+      </section>
+
+      <section class="workspace-grid">
+        <div class="editor-column">
+          <div class="panel-card">
+            <div class="panel-head">
+              <div>
+                <span class="admin-kicker">Arquivo</span>
+                <h2>Página em edição</h2>
+              </div>
+              <select data-field="page">
+                <option value="index.html">Página inicial</option>
+                <option value="servicos.html">Serviços</option>
+                <option value="torge.html">Sistema Torge</option>
+                <option value="implantacao.html">Implantação</option>
+                <option value="sobre.html">Sobre</option>
+                <option value="contato.html">Contato</option>
+                <option value="politica-de-privacidade.html">Privacidade</option>
+                <option value="404.html">404</option>
+              </select>
+            </div>
+            <p class="panel-note">Tudo que você alterar aqui será aplicado ao HTML da página selecionada. Antes de publicar, confira a prévia.</p>
+          </div>
+
+          <section class="tab-panel active" data-tab="content">
+            <div class="panel-card">
+              <div class="panel-head">
+                <div><span class="admin-kicker">Resumo</span><h2>Conteúdo carregado</h2></div>
+              </div>
+              <div class="metric-grid">
+                <div class="metric"><strong data-count="texts">0</strong><span>textos editáveis</span></div>
+                <div class="metric"><strong data-count="images">0</strong><span>imagens</span></div>
+                <div class="metric"><strong data-count="seo">0</strong><span>campos SEO</span></div>
+              </div>
+              <div class="quick-actions">
+                <button type="button" data-tab-jump="texts">Editar textos</button>
+                <button type="button" data-tab-jump="images">Trocar imagens</button>
+                <button type="button" data-tab-jump="blocks">Criar bloco novo</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-panel" data-tab="texts">
+            <div class="panel-card">
+              <div class="panel-head">
+                <div><span class="admin-kicker">Textos</span><h2>Editar textos da página</h2></div>
+                <input class="search-input" data-field="text-filter" placeholder="Buscar texto...">
+              </div>
+              <div class="field-list" data-list="texts"></div>
+            </div>
+          </section>
+
+          <section class="tab-panel" data-tab="images">
+            <div class="panel-card">
+              <div class="panel-head">
+                <div><span class="admin-kicker">Imagens</span><h2>Trocar fotos e logos</h2></div>
+                <label class="upload-button">
+                  Enviar imagem nova
+                  <input type="file" data-field="global-upload" accept="image/*">
+                </label>
+              </div>
+              <div class="image-list" data-list="images"></div>
+            </div>
+          </section>
+
+          <section class="tab-panel" data-tab="blocks">
+            <div class="panel-card">
+              <div class="panel-head">
+                <div><span class="admin-kicker">Criar</span><h2>Adicionar coisas novas</h2></div>
+              </div>
+              <div class="block-grid">
+                <article>
+                  <h3>Novo serviço</h3>
+                  <p>Adiciona um card na primeira grade de serviços da página.</p>
+                  <button type="button" data-action="add-service">Adicionar serviço</button>
+                </article>
+                <article>
+                  <h3>Novo plano</h3>
+                  <p>Adiciona um plano na primeira grade de preços da página.</p>
+                  <button type="button" data-action="add-plan">Adicionar plano</button>
+                </article>
+                <article>
+                  <h3>Nova seção CTA</h3>
+                  <p>Cria uma chamada com título, texto e botão antes do rodapé.</p>
+                  <button type="button" data-action="add-cta">Adicionar CTA</button>
+                </article>
+                <article>
+                  <h3>Nova página</h3>
+                  <p>Cria uma página HTML nova usando o visual atual do site.</p>
+                  <button type="button" data-action="create-page">Criar página</button>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="tab-panel" data-tab="seo">
+            <div class="panel-card">
+              <div class="panel-head">
+                <div><span class="admin-kicker">SEO</span><h2>Title, descrição e compartilhamento</h2></div>
+              </div>
+              <div class="seo-form" data-list="seo"></div>
+            </div>
+          </section>
+
+          <section class="tab-panel" data-tab="publish">
+            <div class="panel-card">
+              <div class="panel-head">
+                <div><span class="admin-kicker">Publicação</span><h2>Salvar no GitHub Pages</h2></div>
+              </div>
+              <label>
+                Mensagem do commit
+                <input data-field="commit-message" value="Atualiza conteúdo pelo painel admin">
+              </label>
+              <div class="publish-box">
+                <div><strong data-pending-count>0</strong><span>arquivos pendentes</span></div>
+                <button class="primary-btn" type="button" data-action="publish">Publicar alterações</button>
+              </div>
+              <div class="log-box" data-log></div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="preview-column">
+          <div class="panel-card preview-card">
+            <div class="panel-head">
+              <div><span class="admin-kicker">Pré-visualização</span><h2>Como o site vai ficar</h2></div>
+              <div class="preview-tools">
+                <button type="button" data-preview-size="desktop">Desktop</button>
+                <button type="button" data-preview-size="mobile">Celular</button>
+              </div>
+            </div>
+            <iframe title="Prévia do site" data-preview></iframe>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <dialog data-dialog="new-page">
+    <form method="dialog" class="dialog-card">
+      <h2>Criar nova página</h2>
+      <label>Nome do arquivo<input data-new-page="slug" placeholder="minha-pagina.html"></label>
+      <label>Título da página<input data-new-page="title" placeholder="Nova solução"></label>
+      <label>Descrição<textarea data-new-page="description" placeholder="Texto de apresentação da nova página"></textarea></label>
+      <menu>
+        <button value="cancel" type="submit">Cancelar</button>
+        <button value="default" type="button" data-action="confirm-create-page">Criar página</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="assets/js/admin.js" defer></script>
+</body>
+</html>

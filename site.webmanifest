@@ -1,12 +1,12 @@
 {
-  "name": "Ronaldo Tecnologia",
-  "short_name": "Ronaldo Tecnologia",
-  "description": "Soluções tecnológicas para empresas crescerem.",
+  "name": "Ronaldo J. — Ronaldo Tecnologia",
+  "short_name": "Ronaldo J.",
+  "description": "Robótica, automação, redes, apps, sites e câmeras conectadas.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#020713",
-  "theme_color": "#020713",
+  "background_color": "#070a12",
+  "theme_color": "#070a12",
   "icons": [
     {
       "src": "favicon.svg",

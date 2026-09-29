@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {"path": "/", "title": "Ronaldo J. — Ronaldo Tecnologia"},
+    {"path": "/index.html", "title": "Ronaldo J. — Ronaldo Tecnologia"},
+    {"path": "/servicos.html", "title": "Serviços | Ronaldo J."},
+    {"path": "/torge.html", "title": "Sistema Torge | Ronaldo Tecnologia"},
+    {"path": "/implantacao.html", "title": "Implantação de Sistemas | Ronaldo Tecnologia"},
+    {"path": "/sobre.html", "title": "Sobre | Ronaldo Tecnologia"},
+    {"path": "/contato.html", "title": "Contato | Ronaldo Tecnologia"},
+    {"path": "/politica-de-privacidade.html", "title": "Política de Privacidade | Ronaldo Tecnologia"}
+  ]
+}

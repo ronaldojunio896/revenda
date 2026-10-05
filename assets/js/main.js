@@ -11,7 +11,7 @@
 
   window.RonaldoTecnologia = {
     version: "2026.09.29",
-    pages: ["home", "sobre", "servicos", "torge", "implantacao", "contato"],
+    pages: ["home", "sobre", "servicos", "modelos", "torge", "implantacao", "contato"],
     contact: {
       whatsapp: phone,
       email: "ronaldo@ronaldotecnologia.com.br",

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Silva Elétrica — Eletricista Residencial e Comercial | Modelo demonstrativo</title>
+<meta name="description" content="Modelo demonstrativo de site para prestador de serviços ou eletricista. Dados e marca fictícios, personalizáveis para cada negócio.">
+<meta name="robots" content="noindex,follow">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--n:#0A1F44;--a:#FFB400;--b:#2F6BFF;--w:#F7F9FC;--k:#0C1626;--f:"Sora","Segoe UI",system-ui,sans-serif;--s:"Public Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}body{font-family:var(--s);background:var(--w);color:var(--k);font-size:17px;line-height:1.6}
+:focus-visible{outline:3px solid var(--b);outline-offset:3px}.w{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--f);line-height:1.12;font-weight:800}
+.btn{display:inline-block;background:var(--a);color:var(--n);font-family:var(--f);font-weight:700;font-size:16px;padding:15px 28px;border-radius:10px;text-decoration:none}.btn:hover{background:#ffc533}.btn.ol{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.urg{background:var(--a);color:var(--n);text-align:center;font-weight:600;font-size:15px;padding:8px}
+header{background:var(--n);color:#fff}nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}.logo{font-family:var(--f);font-weight:800;font-size:22px}.logo b{color:var(--a)}nav .btn{padding:9px 18px;font-size:14px}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding:36px 0 80px}
+.hero h1{font-size:clamp(36px,5.6vw,64px)}.hero p{margin:20px 0 28px;color:#b8c6e0;font-size:19px;max-width:27em}.hero .a{display:flex;gap:12px;flex-wrap:wrap}
+.raio{max-width:280px;margin:auto;width:100%}.raio svg{width:100%;height:auto;filter:drop-shadow(0 0 28px rgba(255,180,0,.45))}
+.sel{display:flex;gap:20px;flex-wrap:wrap;margin-top:22px;font-size:14px;color:#b8c6e0}.sel span::before{content:"✓ ";color:var(--a)}
+section{padding:72px 0}h2{font-size:clamp(28px,4vw,42px);margin-bottom:28px}
+.sv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.sv div{background:#fff;border:1px solid #dde4ef;border-radius:14px;padding:24px}.sv h3{font-size:19px;margin-bottom:8px}.sv p{font-size:15.5px;color:#4a5a73}
+.sv div:first-child{background:var(--n);color:#fff;border:0}.sv div:first-child p{color:#b8c6e0}.sv div:first-child h3{color:var(--a)}
+.pa{background:#fff;border-block:1px solid #dde4ef}.pa ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:p}
+.pa li{counter-increment:p}.pa li::before{content:counter(p);display:grid;place-content:center;width:44px;height:44px;border-radius:50%;background:var(--b);color:#fff;font-family:var(--f);font-weight:700;margin-bottom:12px}
+.pa h3{font-size:20px;margin-bottom:6px}.pa p{color:#4a5a73;font-size:16px}
+.rg{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}.rg span{background:#fff;border:1px solid #cdd7e6;padding:8px 18px;border-radius:99px;font-weight:500;font-size:15px}
+.cta{background:var(--b);color:#fff;text-align:center}.cta p{max-width:30em;margin:0 auto 26px;font-size:19px}.cta .btn{background:var(--a)}
+.ft{background:var(--k);color:#9fb0cc;padding:30px 0;font-size:14px}.ft .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:820px){.hero,.sv,.pa ol{grid-template-columns:1fr}.raio{max-width:150px}section{padding:52px 0}}
+
+/* Barra de contexto da demonstração: dados abaixo são apenas exemplos. */
+.demo-banner{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:48px;padding:8px max(18px,calc((100vw - 1160px)/2));background:#0b101c;color:#f7fbff;font:500 12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 5px 18px rgba(0,0,0,.2)}
+.demo-banner-copy{display:flex;align-items:center;gap:9px}.demo-banner-label{color:#c7ff5e;font-size:10px;font-weight:900;letter-spacing:.12em;white-space:nowrap}.demo-banner-copy span:last-child{color:#d2dae4}.demo-banner-actions{display:flex;align-items:center;gap:12px;white-space:nowrap}.demo-banner a{color:#f7fbff;text-decoration:none;font-weight:800}.demo-banner a:hover{text-decoration:underline;text-underline-offset:3px}.demo-banner .demo-banner-cta{border-radius:999px;background:linear-gradient(135deg,#c7ff5e,#63f3d2);color:#09100e;padding:7px 12px;font-size:11px}
+@media(max-width:620px){.demo-banner{align-items:flex-start;flex-direction:column;gap:5px;padding:8px 14px}.demo-banner-copy{align-items:flex-start;flex-direction:column;gap:1px}.demo-banner-copy span:last-child{font-size:10px}.demo-banner-actions{width:100%;justify-content:space-between}}
+</style></head><body>
+<div class="demo-banner" role="region" aria-label="Aviso: modelo de demonstração">
+  <div class="demo-banner-copy"><span class="demo-banner-label">MODELO DEMONSTRATIVO</span><span>Marca, endereço, preços, avaliações e condições são ilustrativos.</span></div>
+  <div class="demo-banner-actions"><a href="../modelos.html">← Voltar à galeria</a><a class="demo-banner-cta" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20prestador%20de%20servi%C3%A7os%20ou%20eletricista%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero um site assim ↗</a></div>
+</div>
+
+<div class="urg">Plantão de emergência 24 horas · Atendimento em Belo Horizonte e Contagem</div>
+<header><div class="w"><nav><span class="logo">Silva <b>Elétrica</b></span><a class="btn" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20prestador%20de%20servi%C3%A7os%20ou%20eletricista%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Falar pelo WhatsApp</a></nav>
+<div class="hero"><div><h1>Eletricista de confiança para sua casa e seu negócio.</h1><p>Instalação, manutenção e reparo com orçamento fechado antes de começar e garantia por escrito.</p><div class="a"><a class="btn" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20prestador%20de%20servi%C3%A7os%20ou%20eletricista%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Pedir orçamento grátis</a><a class="btn ol" href="#servicos">Ver serviços</a></div>
+<div class="sel"><span>Técnico com NR-10</span><span>Garantia de 90 dias</span><span>Nota fiscal</span></div></div>
+<div class="raio" role="img" aria-label="Ícone de raio"><svg viewBox="0 0 100 140"><path d="M58 4 12 80h30l-8 56 54-84H50z" fill="#FFB400"/></svg></div></div></div></header>
+<main><section id="servicos"><div class="w"><h2>O que resolvemos</h2><div class="sv">
+<div><h3>Emergência 24h</h3><p>Curto-circuito, queda de energia, cheiro de queimado ou disjuntor que não segura. Chegamos em até 1 hora.</p></div>
+<div><h3>Instalações novas</h3><p>Tomadas, interruptores, luminárias, chuveiros e ventiladores de teto.</p></div>
+<div><h3>Quadro de distribuição</h3><p>Troca de disjuntores, DR e aterramento. Mais segurança para sua família.</p></div>
+<div><h3>Reformas e obras</h3><p>Passagem de fiação, ampliação de carga e projeto elétrico para reformas.</p></div>
+<div><h3>Iluminação</h3><p>Spots, fitas de LED, iluminação de jardim e fachada.</p></div>
+<div><h3>Comércio e escritório</h3><p>Manutenção preventiva, laudos e adequação às normas.</p></div></div></div></section>
+<section class="pa"><div class="w"><h2>Do chamado ao serviço pronto</h2><ol>
+<li><h3>Você conta o problema</h3><p>Por WhatsApp, com foto ou vídeo, para adiantar o diagnóstico.</p></li>
+<li><h3>Orçamento fechado</h3><p>Visita técnica gratuita e valor combinado antes de começar. Sem taxa extra.</p></li>
+<li><h3>Serviço e garantia</h3><p>Trabalho limpo, teste final com você e garantia de 90 dias por escrito.</p></li></ol></div></section>
+<section><div class="w"><h2>Onde atendemos</h2><div class="rg"><span>Savassi</span><span>Funcionários</span><span>Pampulha</span><span>Buritis</span><span>Centro</span><span>Contagem</span><span>Betim</span><span>Nova Lima</span></div></div></section>
+<section class="cta"><div class="w"><h2>Algo não está funcionando?</h2><p>Mande uma mensagem agora. Respondemos em minutos, todos os dias.</p><a class="btn" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20prestador%20de%20servi%C3%A7os%20ou%20eletricista%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Chamar no WhatsApp</a></div></section></main>
+<div class="ft"><div class="w"><span>© 2026 Silva Elétrica · Dados empresariais ilustrativos</span><span>Modelo de demonstração</span></div></div></body></html>

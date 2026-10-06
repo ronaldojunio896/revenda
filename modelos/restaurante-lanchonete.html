@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chapa Quente — Hambúrguer e Lanches | Modelo demonstrativo</title>
+<meta name="description" content="Modelo demonstrativo de site para restaurante ou lanchonete. Dados e marca fictícios, personalizáveis para cada negócio.">
+<meta name="robots" content="noindex,follow">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--r:#D62828;--o:#F77F00;--d:#1F1A17;--c:#FFF3E0;--b:#FCBF49;--f:"Alfa Slab One",Rockwell,Georgia,serif;--s:"Nunito",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}body{font-family:var(--s);background:var(--c);color:var(--d);font-size:17px;line-height:1.55}
+:focus-visible{outline:3px solid var(--d);outline-offset:3px}.w{max-width:1100px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--f);font-weight:400;line-height:1.08}
+.btn{display:inline-block;background:var(--r);color:#fff;font-weight:800;padding:15px 30px;border-radius:999px;text-decoration:none;font-size:17px}
+.btn:hover{background:#b01e1e}.btn.y{background:var(--b);color:var(--d)}
+header{background:var(--r);color:#fff}nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}.logo{font-family:var(--f);font-size:26px}
+nav a.btn{padding:10px 20px;font-size:15px}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;padding:28px 0 72px}
+.hero h1{font-size:clamp(44px,7.5vw,88px)}.hero p{margin:18px 0 28px;font-size:19px;max-width:26em}
+.burger{max-width:380px;margin:auto;width:100%}.burger div{height:44px;margin:0 auto}
+.p1{background:#E8A33D;border-radius:120px 120px 20px 20px;height:90px!important;width:100%}
+.p2{background:#3C7A2E;border-radius:30px;width:104%}.p3{background:#5A2D1B;border-radius:14px;height:56px!important}
+.p4{background:#FCBF49;border-radius:8px;width:106%;height:26px!important}.p5{background:#E8A33D;border-radius:20px 20px 60px 60px;height:56px!important}
+.combo{background:var(--d);color:var(--c);padding:28px 0}.combo .w{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.combo h2{font-size:28px;color:var(--b)}.combo p{font-size:18px}.combo strong{font-family:var(--f);font-size:34px;color:var(--b);font-weight:400}
+section{padding:72px 0}h2{font-size:clamp(32px,4.5vw,50px);margin-bottom:32px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}.menu h3{font-size:26px;color:var(--r);margin:10px 0 4px}
+.it{display:flex;gap:12px;align-items:baseline;padding:13px 0;border-bottom:2px dotted #d8c2a0}.it div{flex:1}.it b{font-weight:800}.it small{display:block;font-size:14px;color:#6b5d50}.it span{font-family:var(--f);font-size:19px;color:var(--r)}
+.dl{background:var(--b)}.dl .g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dl .g div{background:var(--c);padding:24px;border-radius:20px}.dl h3{font-size:24px;margin-bottom:8px}.dl p{font-size:16px}
+.ft{background:var(--d);color:var(--c);padding:44px 0;font-size:15px}.ft .w{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}.ft address{font-style:normal;line-height:1.8}
+@media(max-width:800px){.hero,.menu,.dl .g{grid-template-columns:1fr}.burger{max-width:240px}section{padding:52px 0}}
+
+/* Barra de contexto da demonstração: dados abaixo são apenas exemplos. */
+.demo-banner{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:48px;padding:8px max(18px,calc((100vw - 1160px)/2));background:#0b101c;color:#f7fbff;font:500 12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 5px 18px rgba(0,0,0,.2)}
+.demo-banner-copy{display:flex;align-items:center;gap:9px}.demo-banner-label{color:#c7ff5e;font-size:10px;font-weight:900;letter-spacing:.12em;white-space:nowrap}.demo-banner-copy span:last-child{color:#d2dae4}.demo-banner-actions{display:flex;align-items:center;gap:12px;white-space:nowrap}.demo-banner a{color:#f7fbff;text-decoration:none;font-weight:800}.demo-banner a:hover{text-decoration:underline;text-underline-offset:3px}.demo-banner .demo-banner-cta{border-radius:999px;background:linear-gradient(135deg,#c7ff5e,#63f3d2);color:#09100e;padding:7px 12px;font-size:11px}
+@media(max-width:620px){.demo-banner{align-items:flex-start;flex-direction:column;gap:5px;padding:8px 14px}.demo-banner-copy{align-items:flex-start;flex-direction:column;gap:1px}.demo-banner-copy span:last-child{font-size:10px}.demo-banner-actions{width:100%;justify-content:space-between}}
+</style></head><body>
+<div class="demo-banner" role="region" aria-label="Aviso: modelo de demonstração">
+  <div class="demo-banner-copy"><span class="demo-banner-label">MODELO DEMONSTRATIVO</span><span>Marca, endereço, preços, avaliações e condições são ilustrativos.</span></div>
+  <div class="demo-banner-actions"><a href="../modelos.html">← Voltar à galeria</a><a class="demo-banner-cta" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20restaurante%20ou%20lanchonete%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero um site assim ↗</a></div>
+</div>
+
+<header><div class="w"><nav><span class="logo">Chapa Quente</span><a class="btn y" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20restaurante%20ou%20lanchonete%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Pedir agora</a></nav>
+<div class="hero"><div><h1>Hambúrguer feito na hora, na chapa.</h1><p>Carne de 160 g, pão macio e molho da casa. Peça no balcão, no salão ou por delivery.</p><a class="btn y" href="#cardapio">Ver cardápio</a></div>
+<div class="burger" role="img" aria-label="Ilustração de hambúrguer"><div class="p1"></div><div class="p4"></div><div class="p3"></div><div class="p2"></div><div class="p5"></div></div></div></div></header>
+<div class="combo"><div class="w"><div><h2>Combo do dia</h2><p>Smash Duplo + batata + refri 350 ml</p></div><strong>R$ 34,90</strong><a class="btn y" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20restaurante%20ou%20lanchonete%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Pedir combo</a></div></div>
+<main><section id="cardapio"><div class="w"><h2>Cardápio</h2><div class="menu">
+<div><h3>Hambúrgueres</h3>
+<div class="it"><div><b>Clássico</b><small>Carne, queijo, alface, tomate</small></div><span>R$ 24</span></div>
+<div class="it"><div><b>Smash Duplo</b><small>2 carnes, cheddar, cebola caramelizada</small></div><span>R$ 29</span></div>
+<div class="it"><div><b>Bacon Chapa</b><small>Carne, bacon crocante, molho barbecue</small></div><span>R$ 32</span></div>
+<div class="it"><div><b>Veggie</b><small>Burger de grão-de-bico, rúcula, maionese verde</small></div><span>R$ 27</span></div></div>
+<div><h3>Porções e bebidas</h3>
+<div class="it"><div><b>Batata frita</b><small>Porção média com cheddar e bacon</small></div><span>R$ 22</span></div>
+<div class="it"><div><b>Onion rings</b><small>Porção com 10 anéis</small></div><span>R$ 20</span></div>
+<div class="it"><div><b>Milkshake</b><small>Chocolate, morango ou doce de leite</small></div><span>R$ 18</span></div>
+<div class="it"><div><b>Refrigerante lata</b><small>350 ml</small></div><span>R$ 6</span></div></div></div></div></section>
+<section class="dl"><div class="w"><h2>Peça do jeito que preferir</h2><div class="g">
+<div><h3>Delivery</h3><p>Entrega em até 40 min num raio de 5 km. Taxa a partir de R$ 5.</p></div>
+<div><h3>Retirada</h3><p>Peça pelo WhatsApp e busque no balcão sem fila, com 10% de desconto.</p></div>
+<div><h3>No salão</h3><p>20 lugares, ar-condicionado e chope gelado todos os dias.</p></div></div></div></section></main>
+<div class="ft"><div class="w"><address><strong>Chapa Quente</strong><br>Rua Curitiba, 340, Centro<br>Belo Horizonte, MG</address><address>Terça a domingo<br>11:00 às 23:00<br>Segunda: fechado</address><span>© 2026 · Modelo de demonstração</span></div></div></body></html>

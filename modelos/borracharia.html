@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pneu Forte Borracharia 24h | Modelo demonstrativo</title>
+<meta name="description" content="Modelo demonstrativo de site para borracharia. Dados e marca fictícios, personalizáveis para cada negócio.">
+<meta name="robots" content="noindex,follow">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--k:#141414;--y:#FFC800;--g:#2A2A2A;--w:#F5F5F0;--f:"Barlow Condensed","Arial Narrow",Impact,sans-serif;--s:"Barlow",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}body{font-family:var(--s);background:var(--w);color:var(--k);font-size:17px;line-height:1.55}
+:focus-visible{outline:3px solid var(--y);outline-offset:3px}.w{max-width:1100px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--f);font-weight:800;text-transform:uppercase;line-height:1}
+.btn{display:inline-block;background:var(--y);color:var(--k);font-family:var(--f);font-weight:800;font-size:22px;text-transform:uppercase;padding:14px 28px;text-decoration:none;border:3px solid var(--k);box-shadow:5px 5px 0 var(--k)}
+.btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--k)}
+.bar{background:var(--y);font-family:var(--f);font-weight:800;font-size:19px;text-transform:uppercase;text-align:center;padding:8px}
+header{background:var(--k);color:var(--w);border-bottom:8px solid var(--y)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}.logo{font-family:var(--f);font-weight:800;font-size:28px;text-transform:uppercase}.logo b{color:var(--y)}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding:40px 0 64px}
+.hero h1{font-size:clamp(52px,9vw,104px)}.hero h1 em{font-style:normal;color:var(--y)}
+.hero p{margin:20px 0 28px;font-size:19px;max-width:28em;color:#ccc}
+.pneu{aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--y) 0 14%,#777 14% 17%,var(--g) 17% 52%,var(--k) 52% 100%);border:10px solid #3a3a3a;box-shadow:0 0 0 6px var(--y);max-width:380px;margin:auto;width:100%;display:grid;place-content:center;color:var(--k);font-family:var(--f);font-weight:800;font-size:22px;text-align:center}
+section{padding:64px 0}h2{font-size:clamp(36px,5vw,56px);margin-bottom:28px}
+.srv{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:3px solid var(--k)}
+.srv div{padding:24px;border:1.5px solid var(--k);background:#fff}.srv h3{font-size:28px;margin-bottom:8px}.srv p{color:#555;font-size:16px}
+.pr{background:var(--k);color:var(--w)}.pr table{width:100%;border-collapse:collapse;max-width:720px}
+.pr td{padding:14px 0;border-bottom:1px dashed #555;font-size:19px}.pr td:last-child{text-align:right;font-family:var(--f);font-weight:800;font-size:28px;color:var(--y)}
+.pr small{display:block;color:#999;font-size:14px}.pr .nota{margin-top:18px;color:#aaa;font-size:15px}
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:40px}.ct address{font-style:normal;font-size:19px;line-height:1.9}
+footer{background:var(--y);padding:18px 0;font-weight:600;font-size:14px;text-align:center}
+@media(max-width:800px){.hero,.ct,.srv{grid-template-columns:1fr}.pneu{max-width:240px}section{padding:48px 0}}
+
+/* Barra de contexto da demonstração: dados abaixo são apenas exemplos. */
+.demo-banner{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:48px;padding:8px max(18px,calc((100vw - 1160px)/2));background:#0b101c;color:#f7fbff;font:500 12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 5px 18px rgba(0,0,0,.2)}
+.demo-banner-copy{display:flex;align-items:center;gap:9px}.demo-banner-label{color:#c7ff5e;font-size:10px;font-weight:900;letter-spacing:.12em;white-space:nowrap}.demo-banner-copy span:last-child{color:#d2dae4}.demo-banner-actions{display:flex;align-items:center;gap:12px;white-space:nowrap}.demo-banner a{color:#f7fbff;text-decoration:none;font-weight:800}.demo-banner a:hover{text-decoration:underline;text-underline-offset:3px}.demo-banner .demo-banner-cta{border-radius:999px;background:linear-gradient(135deg,#c7ff5e,#63f3d2);color:#09100e;padding:7px 12px;font-size:11px}
+@media(max-width:620px){.demo-banner{align-items:flex-start;flex-direction:column;gap:5px;padding:8px 14px}.demo-banner-copy{align-items:flex-start;flex-direction:column;gap:1px}.demo-banner-copy span:last-child{font-size:10px}.demo-banner-actions{width:100%;justify-content:space-between}}
+.pneu span{display:inline-block;border:2px solid var(--y);border-radius:8px;background:rgba(20,20,20,.94);color:var(--y);padding:7px 10px;font-size:17px;line-height:1.1}
+</style></head><body>
+<div class="demo-banner" role="region" aria-label="Aviso: modelo de demonstração">
+  <div class="demo-banner-copy"><span class="demo-banner-label">MODELO DEMONSTRATIVO</span><span>Marca, endereço, preços, avaliações e condições são ilustrativos.</span></div>
+  <div class="demo-banner-actions"><a href="../modelos.html">← Voltar à galeria</a><a class="demo-banner-cta" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20borracharia%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero um site assim ↗</a></div>
+</div>
+
+<div class="bar">Socorro 24 horas · Atendemos na estrada e na sua porta</div>
+<header><div class="w"><nav><span class="logo">Pneu <b>Forte</b></span><a class="btn" style="font-size:17px;padding:9px 18px" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20borracharia%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Falar pelo WhatsApp</a></nav>
+<div class="hero"><div><h1>Furou o pneu? <em>A gente chega.</em></h1><p>Remendo, troca, calibragem e balanceamento na hora, sem fila e sem enrolação. Preço combinado antes de começar.</p><a class="btn" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20borracharia%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Chamar no WhatsApp</a></div><div class="pneu" role="img" aria-label="Ilustração de pneu"><span>Chegamos em<br>até 30 min</span></div></div></div></header>
+<main>
+<section><div class="w"><h2>O que a gente resolve</h2><div class="srv">
+<div><h3>Remendo</h3><p>Pneu sem câmara ou com câmara, de carro, moto e utilitário.</p></div>
+<div><h3>Troca de pneus</h3><p>Montagem, desmontagem e descarte correto do pneu velho.</p></div>
+<div><h3>Balanceamento</h3><p>Acaba com a vibração no volante e desgaste irregular.</p></div>
+<div><h3>Calibragem</h3><p>Grátis para clientes. Nitrogênio disponível.</p></div>
+<div><h3>Socorro 24h</h3><p>Vamos até você em cidade, bairro e rodovia próxima.</p></div>
+<div><h3>Alinhamento</h3><p>Parceria com oficina ao lado. Resolve tudo em uma visita.</p></div></div></div></section>
+<section class="pr"><div class="w"><h2>Preços sem surpresa</h2><table>
+<tr><td>Remendo de pneu<small>Carro ou moto</small></td><td>R$ 30</td></tr>
+<tr><td>Balanceamento<small>Por roda</small></td><td>R$ 20</td></tr>
+<tr><td>Troca de pneu<small>Mão de obra, por pneu</small></td><td>R$ 25</td></tr>
+<tr><td>Socorro no local<small>Até 15 km</small></td><td>R$ 80</td></tr></table>
+<p class="nota">Valores de exemplo. Pneus novos com preço e garantia na hora.</p></div></section>
+<section><div class="w ct"><div><h2>Onde estamos</h2><address><strong>Pneu Forte Borracharia</strong><br>Av. Cristiano Machado, 4500<br>Belo Horizonte, MG<br>(31) 9XXXX-XXXX</address></div>
+<div><h2>Horário</h2><address>Segunda a sábado: 24 horas<br>Domingo e feriados: 24 horas<br>Plantão sempre ligado.</address></div></div></section></main>
+<footer>© 2026 Pneu Forte · Modelo de demonstração</footer></body></html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maison Alba — Boutique | Modelo demonstrativo</title>
+<meta name="description" content="Modelo demonstrativo de site para boutique ou loja. Dados e marca fictícios, personalizáveis para cada negócio.">
+<meta name="robots" content="noindex,follow">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--i:#16161A;--p:#F4F2EE;--r:#C9A7A0;--m:#8A8580;--l:#DEDAD3;--f:"Bodoni Moda","Didot",Georgia,serif;--s:"Jost","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box;margin:0}body{font-family:var(--s);font-weight:300;background:var(--p);color:var(--i);font-size:17px;line-height:1.65}
+:focus-visible{outline:2px solid var(--i);outline-offset:4px}.w{max-width:1160px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--f);font-weight:400;line-height:1.05}
+nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:24px 0;border-bottom:1px solid var(--l)}
+.logo{font-family:var(--f);font-size:30px;letter-spacing:.02em;text-decoration:none}nav a{text-decoration:none;font-size:15px}
+nav .l{display:flex;gap:26px}nav .r{text-align:right}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.hero .txt{display:flex;flex-direction:column;justify-content:center;padding:64px 56px 64px 0}
+.hero h1{font-size:clamp(46px,7vw,92px);font-style:italic}
+.hero p{margin:24px 0 32px;max-width:26em;color:var(--m)}
+.btn{display:inline-block;border:1px solid var(--i);padding:15px 34px;text-decoration:none;font-size:15px;font-weight:400;letter-spacing:.04em;align-self:flex-start;background:var(--i);color:var(--p)}
+.btn:hover{background:transparent;color:var(--i)}
+.vis{background:linear-gradient(160deg,var(--r) 0 55%,#B38F88 55% 100%);position:relative;display:grid;place-content:center}
+.vis i{display:block;width:180px;height:330px;border:2px solid rgba(255,255,255,.7);border-radius:90px 90px 6px 6px}
+.vis span{position:absolute;left:20px;bottom:18px;font-size:13px;color:#fff}
+section{padding:80px 0}h2{font-size:clamp(32px,4vw,48px);margin-bottom:36px}
+.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.pc .im{aspect-ratio:3/4;margin-bottom:14px;position:relative}.pc:nth-child(1) .im{background:#D9C9C2}.pc:nth-child(2) .im{background:#C4C9C0}.pc:nth-child(3) .im{background:#CFC4B5}.pc:nth-child(4) .im{background:#BFC3CC}
+.pc .im b{position:absolute;top:10px;left:10px;background:var(--p);font-weight:400;font-size:12px;padding:3px 10px}
+.pc h3{font-size:20px}.pc p{color:var(--m);font-size:15px}
+.cat{display:flex;gap:0;border-block:1px solid var(--i)}.cat a{flex:1;text-align:center;padding:26px 8px;text-decoration:none;font-family:var(--f);font-size:24px;border-right:1px solid var(--l)}.cat a:last-child{border:0}.cat a:hover{background:var(--i);color:var(--p)}
+.sv{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;border-top:1px solid var(--i);padding-top:36px}.sv h3{font-size:22px;margin-bottom:8px}.sv p{color:var(--m);font-size:16px}
+.nl{background:var(--i);color:var(--p);text-align:center}.nl p{max-width:30em;margin:0 auto 28px;color:#bbb}.nl .btn{background:var(--p);color:var(--i);align-self:auto}
+footer{padding:28px 0;font-size:14px;color:var(--m)}footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:820px){.hero,.sv{grid-template-columns:1fr}.hero .txt{padding:40px 0}.vis{min-height:320px}.cols{grid-template-columns:1fr 1fr}.cat{flex-wrap:wrap}.cat a{flex:1 1 50%}nav .l{display:none}nav{grid-template-columns:1fr auto}section{padding:56px 0}}
+
+/* Barra de contexto da demonstração: dados abaixo são apenas exemplos. */
+.demo-banner{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:48px;padding:8px max(18px,calc((100vw - 1160px)/2));background:#0b101c;color:#f7fbff;font:500 12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 5px 18px rgba(0,0,0,.2)}
+.demo-banner-copy{display:flex;align-items:center;gap:9px}.demo-banner-label{color:#c7ff5e;font-size:10px;font-weight:900;letter-spacing:.12em;white-space:nowrap}.demo-banner-copy span:last-child{color:#d2dae4}.demo-banner-actions{display:flex;align-items:center;gap:12px;white-space:nowrap}.demo-banner a{color:#f7fbff;text-decoration:none;font-weight:800}.demo-banner a:hover{text-decoration:underline;text-underline-offset:3px}.demo-banner .demo-banner-cta{border-radius:999px;background:linear-gradient(135deg,#c7ff5e,#63f3d2);color:#09100e;padding:7px 12px;font-size:11px}
+@media(max-width:620px){.demo-banner{align-items:flex-start;flex-direction:column;gap:5px;padding:8px 14px}.demo-banner-copy{align-items:flex-start;flex-direction:column;gap:1px}.demo-banner-copy span:last-child{font-size:10px}.demo-banner-actions{width:100%;justify-content:space-between}}
+</style></head><body>
+<div class="demo-banner" role="region" aria-label="Aviso: modelo de demonstração">
+  <div class="demo-banner-copy"><span class="demo-banner-label">MODELO DEMONSTRATIVO</span><span>Marca, endereço, preços, avaliações e condições são ilustrativos.</span></div>
+  <div class="demo-banner-actions"><a href="../modelos.html">← Voltar à galeria</a><a class="demo-banner-cta" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20boutique%20ou%20loja%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero um site assim ↗</a></div>
+</div>
+
+<div class="w"><nav><div class="l"><a href="#novidades">Novidades</a><a href="#colecoes">Coleções</a><a href="#atendimento">Atendimento</a></div><a class="logo" href="#">Maison Alba</a><div class="r"><a href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20boutique%20ou%20loja%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">WhatsApp</a></div></nav>
+<div class="hero"><div class="txt"><h1>Coleção Outono 2026</h1><p>Alfaiataria leve, linho e malha em tons de terra. Peças atemporais para usar do trabalho ao jantar.</p><a class="btn" href="#novidades">Ver novidades</a></div>
+<div class="vis" role="img" aria-label="Ilustração de vestido"><i></i><span>Vestido Aurora — R$ 489</span></div></div></div>
+<main><section id="novidades"><div class="w"><h2>Acabaram de chegar</h2><div class="cols">
+<div class="pc"><div class="im"><b>Novo</b></div><h3>Vestido Aurora</h3><p>Crepe, P ao GG</p><p>R$ 489</p></div>
+<div class="pc"><div class="im"><b>Novo</b></div><h3>Camisa Linho Sage</h3><p>Linho, P ao GG</p><p>R$ 289</p></div>
+<div class="pc"><div class="im"></div><h3>Calça Alfaiataria</h3><p>Cintura alta, 36 ao 46</p><p>R$ 359</p></div>
+<div class="pc"><div class="im"></div><h3>Blazer Fenda</h3><p>Forrado, P ao GG</p><p>R$ 529</p></div></div></div></section>
+<section id="colecoes" style="padding-top:0"><div class="w"><div class="cat"><a href="#">Vestidos</a><a href="#">Alfaiataria</a><a href="#">Malhas</a><a href="#">Acessórios</a></div></div></section>
+<section id="atendimento"><div class="w"><h2>Atendimento de boutique, onde você estiver</h2><div class="sv">
+<div><h3>Provador em casa</h3><p>Separamos até 5 peças e levamos para você experimentar, em BH e região.</p></div>
+<div><h3>Troca em 30 dias</h3><p>Sem pergunta. Basta trazer a peça com etiqueta.</p></div>
+<div><h3>Ajustes na casa</h3><p>Barra e ajustes simples feitos pela nossa costureira em até 3 dias.</p></div></div></div></section>
+<section class="nl"><div class="w"><h2>Lançamentos primeiro com você</h2><p>Receba no WhatsApp as novas peças antes de chegarem à vitrine.</p><a class="btn" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20boutique%20ou%20loja%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Entrar na lista</a></div></section></main>
+<footer><div class="w"><span>© 2026 Maison Alba · Rua da Bahia, 1200, Belo Horizonte</span><span>Modelo de demonstração</span></div></footer></body></html>

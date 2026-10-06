@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prime Auto Center — Oficina Mecânica | Modelo demonstrativo</title>
+<meta name="description" content="Modelo demonstrativo de site para oficina ou auto center. Dados e marca fictícios, personalizáveis para cada negócio.">
+<meta name="robots" content="noindex,follow">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--n:#0B2A45;--n2:#123B5E;--o:#F26B21;--w:#F4F6F8;--k:#0E1A24;--f:"Saira Condensed","Arial Narrow",sans-serif;--s:"Inter",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}body{font-family:var(--s);background:var(--w);color:var(--k);font-size:17px;line-height:1.6}
+:focus-visible{outline:3px solid var(--o);outline-offset:3px}.w{max-width:1100px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--f);font-weight:800;line-height:1.05;text-transform:uppercase}
+.btn{display:inline-block;background:var(--o);color:#fff;font-weight:600;padding:15px 30px;border-radius:6px;text-decoration:none}.btn:hover{background:#d95a14}.btn.ol{background:transparent;border:2px solid #fff}
+header{background:var(--n);color:#fff}nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}.logo{font-family:var(--f);font-weight:800;font-size:28px;text-transform:uppercase}.logo b{color:var(--o)}
+nav .btn{padding:9px 18px;font-size:15px}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding:32px 0 76px}
+.hero h1{font-size:clamp(46px,7.5vw,88px)}.hero p{margin:20px 0 28px;color:#b9cadb;font-size:19px;max-width:27em}.hero .a{display:flex;gap:12px;flex-wrap:wrap}
+.ck{background:#fff;color:var(--k);border-radius:10px;padding:26px;border-top:8px solid var(--o)}.ck h3{font-size:26px;margin-bottom:12px}
+.ck li{list-style:none;padding:9px 0 9px 32px;border-bottom:1px solid #e3e8ed;position:relative;font-size:16px}.ck li::before{content:"";position:absolute;left:4px;top:15px;width:14px;height:8px;border-left:3px solid var(--o);border-bottom:3px solid var(--o);transform:rotate(-45deg)}
+section{padding:72px 0}h2{font-size:clamp(34px,4.5vw,52px);margin-bottom:28px}
+.sv{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.sv div{background:#fff;padding:24px;border-radius:8px;border-left:6px solid var(--o)}.sv h3{font-size:26px;margin-bottom:6px}.sv p{font-size:15.5px;color:#4a5967}.sv b{display:block;margin-top:10px;color:var(--n);font-size:15px}
+.pr{background:var(--n);color:#fff}.pr ol{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:p}
+.pr li{counter-increment:p;border-top:3px solid var(--o);padding-top:14px}.pr li::before{content:counter(p);font-family:var(--f);font-weight:800;font-size:44px;color:var(--o);display:block;line-height:1}
+.pr h3{font-size:24px;margin:6px 0}.pr p{font-size:15px;color:#b9cadb}
+.mc{display:flex;flex-wrap:wrap;gap:10px}.mc span{background:#fff;border:1px solid #cfd8e0;padding:8px 18px;border-radius:99px;font-weight:500}
+.ft{background:var(--k);color:#aebccb;padding:36px 0;font-size:15px}.ft .w{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.ft address{font-style:normal;line-height:1.8}
+@media(max-width:820px){.hero,.sv,.pr ol{grid-template-columns:1fr}section{padding:52px 0}}
+
+/* Barra de contexto da demonstração: dados abaixo são apenas exemplos. */
+.demo-banner{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:48px;padding:8px max(18px,calc((100vw - 1160px)/2));background:#0b101c;color:#f7fbff;font:500 12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 5px 18px rgba(0,0,0,.2)}
+.demo-banner-copy{display:flex;align-items:center;gap:9px}.demo-banner-label{color:#c7ff5e;font-size:10px;font-weight:900;letter-spacing:.12em;white-space:nowrap}.demo-banner-copy span:last-child{color:#d2dae4}.demo-banner-actions{display:flex;align-items:center;gap:12px;white-space:nowrap}.demo-banner a{color:#f7fbff;text-decoration:none;font-weight:800}.demo-banner a:hover{text-decoration:underline;text-underline-offset:3px}.demo-banner .demo-banner-cta{border-radius:999px;background:linear-gradient(135deg,#c7ff5e,#63f3d2);color:#09100e;padding:7px 12px;font-size:11px}
+@media(max-width:620px){.demo-banner{align-items:flex-start;flex-direction:column;gap:5px;padding:8px 14px}.demo-banner-copy{align-items:flex-start;flex-direction:column;gap:1px}.demo-banner-copy span:last-child{font-size:10px}.demo-banner-actions{width:100%;justify-content:space-between}}
+</style></head><body>
+<div class="demo-banner" role="region" aria-label="Aviso: modelo de demonstração">
+  <div class="demo-banner-copy"><span class="demo-banner-label">MODELO DEMONSTRATIVO</span><span>Marca, endereço, preços, avaliações e condições são ilustrativos.</span></div>
+  <div class="demo-banner-actions"><a href="../modelos.html">← Voltar à galeria</a><a class="demo-banner-cta" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20oficina%20ou%20auto%20center%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero um site assim ↗</a></div>
+</div>
+
+<header><div class="w"><nav><span class="logo">Prime <b>Auto Center</b></span><a class="btn" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20oficina%20ou%20auto%20center%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Falar pelo WhatsApp</a></nav>
+<div class="hero"><div><h1>Seu carro em mãos de quem entende.</h1><p>Mecânica geral, elétrica, suspensão e freios com orçamento aprovado por você antes de qualquer serviço e garantia por escrito.</p><div class="a"><a class="btn" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20oficina%20ou%20auto%20center%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Agendar check-up grátis</a><a class="btn ol" href="#servicos">Ver serviços</a></div></div>
+<div class="ck"><h3>Check-up gratuito</h3><ul><li>Freios e pastilhas</li><li>Suspensão e amortecedores</li><li>Óleo, filtros e fluidos</li><li>Bateria e sistema elétrico</li><li>Pneus e alinhamento</li></ul></div></div></div></header>
+<main><section id="servicos"><div class="w"><h2>Serviços</h2><div class="sv">
+<div><h3>Revisão completa</h3><p>Troca de óleo, filtros, velas e checagem de 30 itens conforme o manual.</p><b>A partir de R$ 290</b></div>
+<div><h3>Freios</h3><p>Pastilhas, discos, lonas e fluido. Teste de frenagem antes de entregar.</p><b>A partir de R$ 180</b></div>
+<div><h3>Suspensão</h3><p>Amortecedores, buchas, pivôs e terminais. Alinhamento e balanceamento no local.</p><b>A partir de R$ 220</b></div>
+<div><h3>Elétrica e injeção</h3><p>Scanner, bateria, alternador, motor de partida e injeção eletrônica.</p><b>Diagnóstico R$ 90</b></div>
+<div><h3>Ar-condicionado</h3><p>Higienização, recarga de gás e troca de filtro de cabine.</p><b>A partir de R$ 150</b></div>
+<div><h3>Embreagem e câmbio</h3><p>Troca de kit de embreagem e revisão de câmbio manual e automático.</p><b>Orçamento na hora</b></div></div></div></section>
+<section class="pr"><div class="w"><h2>Como funciona</h2><ol>
+<li><h3>Orçamento</h3><p>Avaliamos o carro e passamos valores e prazo por escrito.</p></li>
+<li><h3>Você aprova</h3><p>Nada é feito sem o seu aval. Peças originais ou paralelas, você escolhe.</p></li>
+<li><h3>Serviço</h3><p>Acompanhe por fotos e vídeos no WhatsApp durante o reparo.</p></li>
+<li><h3>Entrega e garantia</h3><p>Devolvemos as peças trocadas e damos 90 dias de garantia.</p></li></ol></div></section>
+<section><div class="w"><h2>Marcas que atendemos</h2><div class="mc"><span>Fiat</span><span>Volkswagen</span><span>Chevrolet</span><span>Ford</span><span>Toyota</span><span>Honda</span><span>Hyundai</span><span>Renault</span><span>Jeep</span><span>Nissan</span></div></div></section></main>
+<div class="ft"><div class="w"><address><strong>Prime Auto Center</strong><br>Av. do Contorno, 2100, Funcionários<br>Belo Horizonte, MG</address><address>Segunda a sexta: 08:00 às 18:00<br>Sábado: 08:00 às 13:00</address><span>© 2026 · Modelo de demonstração</span></div></div></body></html>

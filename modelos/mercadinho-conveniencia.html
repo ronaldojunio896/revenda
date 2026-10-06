@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mercadinho Bom Preço | Modelo demonstrativo</title>
+<meta name="description" content="Modelo demonstrativo de site para mercadinho ou conveniência. Dados e marca fictícios, personalizáveis para cada negócio.">
+<meta name="robots" content="noindex,follow">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--g:#0E8A4A;--gd:#0A5F34;--y:#FFD60A;--r:#E63946;--w:#FBFBF7;--k:#16251C;--f:"Baloo 2","Trebuchet MS",sans-serif;--s:"Nunito Sans",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}body{font-family:var(--s);background:var(--w);color:var(--k);font-size:17px;line-height:1.5}
+:focus-visible{outline:3px solid var(--k);outline-offset:3px}.w{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--f);font-weight:800;line-height:1.05}
+.btn{display:inline-block;background:var(--y);color:var(--k);font-family:var(--f);font-weight:800;font-size:19px;padding:12px 28px;border-radius:12px;text-decoration:none;border-bottom:4px solid #c9a600}.btn:hover{transform:translateY(1px)}
+.top{background:var(--gd);color:#fff;font-size:14px;text-align:center;padding:7px}
+header{background:var(--g);color:#fff}nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}.logo{font-family:var(--f);font-weight:800;font-size:28px}.logo b{color:var(--y)}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;padding:20px 0 56px}
+.hero h1{font-size:clamp(42px,7vw,80px)}.hero h1 em{font-style:normal;background:var(--y);color:var(--k);padding:0 10px;border-radius:10px;display:inline-block;transform:rotate(-2deg)}
+.hero p{margin:18px 0 24px;font-size:19px;max-width:26em}
+.sel{background:var(--r);color:#fff;border-radius:50%;aspect-ratio:1;max-width:300px;width:100%;margin:auto;display:grid;place-content:center;text-align:center;border:8px dashed var(--y);transform:rotate(6deg)}
+.sel small{font-size:16px;font-weight:700}.sel strong{font-family:var(--f);font-size:72px;line-height:1}.sel span{font-weight:700}
+section{padding:60px 0}h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:24px}
+.of{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.pd{background:#fff;border:2px solid #dfe6d8;border-radius:16px;padding:18px;position:relative}
+.pd i{display:block;height:90px;border-radius:12px;margin-bottom:12px}.pd:nth-child(1) i{background:#FFE29A}.pd:nth-child(2) i{background:#BFE3C7}.pd:nth-child(3) i{background:#FFC6C0}.pd:nth-child(4) i{background:#C9DCF2}
+.pd h3{font-size:20px}.pd small{color:#667a6c;font-size:14px}.pd .pr{font-family:var(--f);font-weight:800;font-size:30px;color:var(--r);margin-top:6px}.pd s{color:#999;font-size:14px;font-weight:400;font-family:var(--s)}
+.pd b{position:absolute;top:12px;right:12px;background:var(--r);color:#fff;font-size:13px;padding:2px 10px;border-radius:99px}
+.cat{background:#EAF4E5}.cat .c{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.cat a{background:#fff;border-radius:14px;padding:20px 8px;text-align:center;text-decoration:none;font-family:var(--f);font-weight:800;font-size:18px;border:2px solid #cfe0c6}.cat a:hover{background:var(--y)}
+.sv{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.sv div{border-left:6px solid var(--g);padding:6px 0 6px 18px}.sv h3{font-size:24px}.sv p{color:#55695b}
+.ft{background:var(--k);color:#cfdcd2;padding:36px 0;font-size:15px}.ft .w{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.ft address{font-style:normal;line-height:1.8}
+@media(max-width:860px){.hero,.sv{grid-template-columns:1fr}.of{grid-template-columns:1fr 1fr}.cat .c{grid-template-columns:1fr 1fr 1fr}.sel{max-width:210px}.sel strong{font-size:52px}section{padding:44px 0}}
+
+/* Barra de contexto da demonstração: dados abaixo são apenas exemplos. */
+.demo-banner{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:48px;padding:8px max(18px,calc((100vw - 1160px)/2));background:#0b101c;color:#f7fbff;font:500 12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 5px 18px rgba(0,0,0,.2)}
+.demo-banner-copy{display:flex;align-items:center;gap:9px}.demo-banner-label{color:#c7ff5e;font-size:10px;font-weight:900;letter-spacing:.12em;white-space:nowrap}.demo-banner-copy span:last-child{color:#d2dae4}.demo-banner-actions{display:flex;align-items:center;gap:12px;white-space:nowrap}.demo-banner a{color:#f7fbff;text-decoration:none;font-weight:800}.demo-banner a:hover{text-decoration:underline;text-underline-offset:3px}.demo-banner .demo-banner-cta{border-radius:999px;background:linear-gradient(135deg,#c7ff5e,#63f3d2);color:#09100e;padding:7px 12px;font-size:11px}
+@media(max-width:620px){.demo-banner{align-items:flex-start;flex-direction:column;gap:5px;padding:8px 14px}.demo-banner-copy{align-items:flex-start;flex-direction:column;gap:1px}.demo-banner-copy span:last-child{font-size:10px}.demo-banner-actions{width:100%;justify-content:space-between}}
+</style></head><body>
+<div class="demo-banner" role="region" aria-label="Aviso: modelo de demonstração">
+  <div class="demo-banner-copy"><span class="demo-banner-label">MODELO DEMONSTRATIVO</span><span>Marca, endereço, preços, avaliações e condições são ilustrativos.</span></div>
+  <div class="demo-banner-actions"><a href="../modelos.html">← Voltar à galeria</a><a class="demo-banner-cta" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20mercadinho%20ou%20conveni%C3%AAncia%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero um site assim ↗</a></div>
+</div>
+
+<div class="top">Aberto todos os dias, das 7h às 22h</div>
+<header><div class="w"><nav><span class="logo">Mercadinho <b>Bom Preço</b></span><a class="btn" style="font-size:16px;padding:8px 18px" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20mercadinho%20ou%20conveni%C3%AAncia%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Fazer pedido</a></nav>
+<div class="hero"><div><h1>Tudo que falta em casa, <em>pertinho</em> de você.</h1><p>Hortifruti fresquinho, pão do dia, bebidas geladas e itens de limpeza. Peça pelo WhatsApp e receba em casa.</p><a class="btn" href="#ofertas">Ver ofertas da semana</a></div>
+<div class="sel" role="img" aria-label="Selo de oferta"><small>Frango inteiro</small><strong>R$ 9,90</strong><span>o quilo</span></div></div></div></header>
+<main><section id="ofertas"><div class="w"><h2>Ofertas da semana</h2><div class="of">
+<div class="pd"><b>-20%</b><i></i><h3>Banana prata</h3><small>Quilo, de produtor local</small><div class="pr"><s>R$ 6,99</s> R$ 5,59</div></div>
+<div class="pd"><b>-15%</b><i></i><h3>Arroz tipo 1</h3><small>Pacote 5 kg</small><div class="pr"><s>R$ 28,90</s> R$ 24,50</div></div>
+<div class="pd"><b>Leve 3</b><i></i><h3>Leite integral</h3><small>Caixa 1 litro</small><div class="pr">R$ 4,79</div></div>
+<div class="pd"><b>-25%</b><i></i><h3>Refrigerante</h3><small>Garrafa 2 litros</small><div class="pr"><s>R$ 10,90</s> R$ 8,19</div></div></div></div></section>
+<section class="cat"><div class="w"><h2>Encontre por seção</h2><div class="c"><a href="#">Hortifruti</a><a href="#">Açougue</a><a href="#">Padaria</a><a href="#">Bebidas</a><a href="#">Limpeza</a><a href="#">Higiene</a></div></div></section>
+<section><div class="w"><div class="sv"><div><h3>Entrega grátis</h3><p>Em compras acima de R$ 60, num raio de 3 km.</p></div><div><h3>Pague como quiser</h3><p>Pix, cartão, vale-refeição e anotado para clientes da vizinhança.</p></div><div><h3>Peça pelo WhatsApp</h3><p>Mande a lista, confirmamos o valor e entregamos em até 1 hora.</p></div></div></div></section></main>
+<div class="ft"><div class="w"><address><strong>Mercadinho Bom Preço</strong><br>Rua das Palmeiras, 55, Bairro Jardim<br>Belo Horizonte, MG</address><address>Todos os dias<br>07:00 às 22:00<br>(31) 9XXXX-XXXX</address><span>© 2026 · Modelo de demonstração</span></div></div></body></html>

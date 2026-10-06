@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Navalha &amp; Tesoura — Barbearia e Salão | Modelo demonstrativo</title>
+<meta name="description" content="Modelo demonstrativo de site para barbearia ou salão. Dados e marca fictícios, personalizáveis para cada negócio.">
+<meta name="robots" content="noindex,follow">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--v:#3E1220;--v2:#531A2D;--o:#C8A15A;--b:#F0EADC;--k:#1A0B11;--f:"Abril Fatface",Didot,Georgia,serif;--s:"Karla",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}body{font-family:var(--s);background:var(--b);color:var(--k);font-size:17px;line-height:1.6}
+:focus-visible{outline:3px solid var(--o);outline-offset:3px}.w{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--f);font-weight:400;line-height:1.05}
+.btn{display:inline-block;background:var(--o);color:var(--k);font-weight:700;padding:15px 32px;text-decoration:none;border-radius:2px;font-size:16px}.btn:hover{background:#dab870}
+header{background:var(--v);color:var(--b)}nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}.logo{font-family:var(--f);font-size:26px}
+nav .btn{padding:9px 20px;font-size:14px}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;padding:40px 0 80px}
+.hero h1{font-size:clamp(44px,7vw,84px)}.hero p{margin:20px 0 30px;max-width:26em;color:#d9c9c0;font-size:19px}
+.poste{margin:auto;width:110px;height:340px;border:6px solid var(--b);border-radius:56px;overflow:hidden;background:repeating-linear-gradient(-45deg,#fff 0 22px,#B8283F 22px 44px,#fff 44px 66px,#24407A 66px 88px);box-shadow:0 0 0 6px var(--o)}
+section{padding:76px 0}h2{font-size:clamp(32px,4.5vw,48px);margin-bottom:12px}.sub{color:#6b5560;margin-bottom:36px}
+.tab{display:grid;grid-template-columns:1fr 1fr;gap:0 64px}.tab h3{font-size:26px;color:var(--v2);padding-bottom:8px;border-bottom:3px solid var(--o);margin-bottom:4px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid #d6cdbb}.row b{font-weight:700}.row small{display:block;color:#7a6a70;font-size:14px}.row span{font-family:var(--f);font-size:20px;white-space:nowrap}
+.eq{background:var(--v);color:var(--b)}.eq .sub{color:#c9b5ae}.eq .g{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pf{border-top:3px solid var(--o);padding-top:16px}.pf h3{font-size:26px}.pf p{color:#d9c9c0;font-size:15.5px}
+.ag{text-align:center}.ag p{max-width:30em;margin:0 auto 26px}
+.ag .ok{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:28px;font-size:15px;color:#6b5560}
+footer{background:var(--k);color:#bda9a0;padding:30px 0;font-size:14px}footer .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:800px){.hero,.tab,.eq .g{grid-template-columns:1fr}.poste{width:80px;height:200px}.tab{gap:0}section{padding:54px 0}}
+
+/* Barra de contexto da demonstração: dados abaixo são apenas exemplos. */
+.demo-banner{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:48px;padding:8px max(18px,calc((100vw - 1160px)/2));background:#0b101c;color:#f7fbff;font:500 12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 5px 18px rgba(0,0,0,.2)}
+.demo-banner-copy{display:flex;align-items:center;gap:9px}.demo-banner-label{color:#c7ff5e;font-size:10px;font-weight:900;letter-spacing:.12em;white-space:nowrap}.demo-banner-copy span:last-child{color:#d2dae4}.demo-banner-actions{display:flex;align-items:center;gap:12px;white-space:nowrap}.demo-banner a{color:#f7fbff;text-decoration:none;font-weight:800}.demo-banner a:hover{text-decoration:underline;text-underline-offset:3px}.demo-banner .demo-banner-cta{border-radius:999px;background:linear-gradient(135deg,#c7ff5e,#63f3d2);color:#09100e;padding:7px 12px;font-size:11px}
+@media(max-width:620px){.demo-banner{align-items:flex-start;flex-direction:column;gap:5px;padding:8px 14px}.demo-banner-copy{align-items:flex-start;flex-direction:column;gap:1px}.demo-banner-copy span:last-child{font-size:10px}.demo-banner-actions{width:100%;justify-content:space-between}}
+</style></head><body>
+<div class="demo-banner" role="region" aria-label="Aviso: modelo de demonstração">
+  <div class="demo-banner-copy"><span class="demo-banner-label">MODELO DEMONSTRATIVO</span><span>Marca, endereço, preços, avaliações e condições são ilustrativos.</span></div>
+  <div class="demo-banner-actions"><a href="../modelos.html">← Voltar à galeria</a><a class="demo-banner-cta" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20barbearia%20ou%20sal%C3%A3o%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero um site assim ↗</a></div>
+</div>
+
+<header><div class="w"><nav><span class="logo">Navalha &amp; Tesoura</span><a class="btn" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20barbearia%20ou%20sal%C3%A3o%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Agendar</a></nav>
+<div class="hero"><div><h1>Corte bom é questão de tempo certo.</h1><p>Barbearia e salão com hora marcada, sem espera e com profissionais que ouvem antes de cortar.</p><a class="btn" href="#agendar">Marcar meu horário</a></div><div class="poste" role="img" aria-label="Poste de barbearia"></div></div></div></header>
+<main><section id="servicos"><div class="w"><h2>Serviços e valores</h2><p class="sub">Valores de exemplo. Todos incluem lavagem e finalização.</p><div class="tab">
+<div><h3>Barbearia</h3>
+<div class="row"><div><b>Corte masculino</b><small>40 minutos</small></div><span>R$ 55</span></div>
+<div class="row"><div><b>Barba com toalha quente</b><small>30 minutos</small></div><span>R$ 40</span></div>
+<div class="row"><div><b>Corte + barba</b><small>1 hora</small></div><span>R$ 85</span></div>
+<div class="row"><div><b>Pezinho e acabamento</b><small>10 minutos</small></div><span>R$ 20</span></div></div>
+<div><h3>Salão</h3>
+<div class="row"><div><b>Corte feminino</b><small>Com escova</small></div><span>R$ 90</span></div>
+<div class="row"><div><b>Coloração</b><small>A partir de, conforme o comprimento</small></div><span>R$ 160</span></div>
+<div class="row"><div><b>Hidratação profunda</b><small>45 minutos</small></div><span>R$ 70</span></div>
+<div class="row"><div><b>Manicure e pedicure</b><small>Pacote completo</small></div><span>R$ 65</span></div></div></div></div></section>
+<section class="eq"><div class="w"><h2>Quem atende você</h2><p class="sub">Escolha o profissional na hora de agendar.</p><div class="g">
+<div class="pf"><h3>Rafael</h3><p>Degradê, navalhado e barba desenhada. 12 anos de ofício.</p></div>
+<div class="pf"><h3>Juliana</h3><p>Cortes femininos, mechas e colorimetria. Especialista em cachos.</p></div>
+<div class="pf"><h3>Diego</h3><p>Corte clássico, infantil e tratamentos para barba e couro cabeludo.</p></div></div></div></section>
+<section class="ag" id="agendar"><div class="w"><h2>Reserve seu horário</h2><p>Mande o dia, o horário e o serviço pelo WhatsApp. Confirmamos em minutos. Cancelamento gratuito até 2 horas antes.</p><a class="btn" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20barbearia%20ou%20sal%C3%A3o%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio.">Agendar pelo WhatsApp</a>
+<div class="ok"><span>Terça a sábado, 09:00 às 20:00</span><span>Rua Pernambuco, 780, Savassi, Belo Horizonte</span></div></div></section></main>
+<footer><div class="w"><span>© 2026 Navalha &amp; Tesoura</span><span>Modelo de demonstração</span></div></footer></body></html>

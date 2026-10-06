@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forno & Farinha — Padaria e Confeitaria | Modelo demonstrativo</title>
+<meta name="robots" content="noindex,follow">
+<meta name="description" content="Pães artesanais, bolos e doces feitos todos os dias. Encomende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde:#1E3B2E; --verde2:#2B5242; --manteiga:#F4D984; --rosa:#F2B8B0;
+  --papel:#F7F8F3; --texto:#1B2A22; --suave:#5B6B61; --linha:#D9DFD3;
+  --serif:"Young Serif",Georgia,"Times New Roman",serif;
+  --sans:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--texto);background:var(--papel);line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--manteiga);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1}
+h2{font-size:clamp(30px,4.5vw,46px);letter-spacing:-.01em}
+
+/* topo */
+header{background:var(--verde);color:var(--papel)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+.logo{font-family:var(--serif);font-size:22px;text-decoration:none}
+.links{display:flex;gap:26px;font-size:15px;font-weight:500}
+.links a{text-decoration:none;opacity:.85}
+.links a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;background:var(--manteiga);color:var(--verde);font-weight:700;text-decoration:none;font-size:16px;border:2px solid var(--manteiga);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn.sm{padding:9px 18px;font-size:14px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center;padding:56px 0 88px}
+.hero h1{font-size:clamp(42px,7vw,84px);letter-spacing:-.02em}
+.hero p.lead{margin:24px 0 32px;font-size:19px;max-width:30em;color:#d6e2d9}
+.hero .acoes{display:flex;gap:14px;flex-wrap:wrap}
+.forno{background:var(--papel);color:var(--texto);border-radius:22px 22px 120px 22px;padding:30px 30px 36px;box-shadow:10px 10px 0 var(--manteiga)}
+.forno h3{font-size:22px;margin-bottom:4px}
+.forno small{color:var(--suave);font-size:14px}
+.forno ul{list-style:none;padding:0;margin-top:18px}
+.forno li{display:grid;grid-template-columns:62px 1fr auto;gap:12px;align-items:baseline;padding:12px 0;border-top:1px solid var(--linha)}
+.forno time{font-family:var(--serif);font-size:20px}
+.forno .tag{font-size:12px;font-weight:700;background:var(--verde);color:var(--manteiga);padding:3px 10px;border-radius:99px;display:none}
+.forno li.prox{background:#FFF6D6;margin:0 -14px;padding:12px 14px;border-radius:10px;border-top-color:transparent}
+.forno li.prox .tag{display:inline-block}
+.forno li.fim{opacity:.5}
+
+/* vitrine */
+section{padding:88px 0}
+.vitrine .topo{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.vitrine .topo p{max-width:30em;color:var(--suave)}
+.colunas{display:grid;grid-template-columns:1fr 1fr;gap:0 64px}
+.colunas h3{font-size:24px;margin:8px 0 6px;color:var(--verde2)}
+.item{display:flex;align-items:baseline;gap:10px;padding:14px 0}
+.item b{font-weight:600}
+.item i{flex:1;border-bottom:2px dotted var(--linha);transform:translateY(-4px)}
+.item span.p{font-family:var(--serif);font-size:18px}
+.item small{display:block;color:var(--suave);font-size:14px;font-weight:400}
+.item>div{max-width:70%}
+
+/* encomendas */
+.enc{background:var(--rosa);color:#3a1d1a}
+.enc .cab{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:48px}
+.enc .cab p{font-size:18px}
+.tipos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tipo{background:var(--papel);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.tipo:nth-child(2){border-radius:18px 18px 60px 18px}
+.tipo h3{font-size:24px}
+.tipo p{color:var(--suave);font-size:15.5px;flex:1}
+.tipo .pr{font-weight:700;color:var(--verde)}
+.aviso{margin-top:28px;font-size:15px}
+
+/* historia */
+.hist{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}
+.selo{aspect-ratio:1;max-width:340px;border-radius:50%;background:var(--verde);color:var(--manteiga);display:grid;place-content:center;text-align:center;padding:30px;outline:2px dashed var(--verde);outline-offset:10px}
+.selo strong{font-family:var(--serif);font-size:64px;font-weight:400;line-height:1}
+.selo span{font-size:15px;color:#d6e2d9}
+.hist p{margin-top:18px;color:var(--suave);max-width:34em}
+.hist p:first-of-type{margin-top:22px}
+
+/* depoimentos */
+.dep{background:var(--manteiga);color:var(--verde)}
+.dep .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:36px}
+blockquote{font-family:var(--serif);font-size:23px;line-height:1.35}
+blockquote footer{font-family:var(--sans);font-size:15px;margin-top:14px;color:var(--verde2);background:none}
+
+/* visita */
+.visita{background:var(--verde);color:var(--papel)}
+.visita .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:36px}
+.hr{width:100%;border-collapse:collapse;font-size:16px}
+.hr td{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.hr td:last-child{text-align:right;font-weight:600}
+.visita address{font-style:normal;line-height:1.8;color:#d6e2d9}
+.visita address strong{color:var(--papel);font-weight:600}
+.visita .acoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+
+footer.rod{padding:28px 0;font-size:14px;color:var(--suave);background:var(--papel)}
+footer.rod .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .hero,.enc .cab,.hist,.dep .grid,.visita .grid,.colunas{grid-template-columns:1fr}
+  .tipos{grid-template-columns:1fr}
+  .links{display:none}
+  section{padding:64px 0}
+  .hero{padding:32px 0 64px;gap:40px}
+  .colunas{gap:0}
+  .selo{max-width:240px;margin:0 auto 12px}
+  .selo strong{font-size:48px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Barra de contexto da demonstração: dados abaixo são apenas exemplos. */
+.demo-banner{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:48px;padding:8px max(18px,calc((100vw - 1160px)/2));background:#0b101c;color:#f7fbff;font:500 12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;box-shadow:0 5px 18px rgba(0,0,0,.2)}
+.demo-banner-copy{display:flex;align-items:center;gap:9px}.demo-banner-label{color:#c7ff5e;font-size:10px;font-weight:900;letter-spacing:.12em;white-space:nowrap}.demo-banner-copy span:last-child{color:#d2dae4}.demo-banner-actions{display:flex;align-items:center;gap:12px;white-space:nowrap}.demo-banner a{color:#f7fbff;text-decoration:none;font-weight:800}.demo-banner a:hover{text-decoration:underline;text-underline-offset:3px}.demo-banner .demo-banner-cta{border-radius:999px;background:linear-gradient(135deg,#c7ff5e,#63f3d2);color:#09100e;padding:7px 12px;font-size:11px}
+@media(max-width:620px){.demo-banner{align-items:flex-start;flex-direction:column;gap:5px;padding:8px 14px}.demo-banner-copy{align-items:flex-start;flex-direction:column;gap:1px}.demo-banner-copy span:last-child{font-size:10px}.demo-banner-actions{width:100%;justify-content:space-between}}
+</style>
+</head>
+<body>
+<div class="demo-banner" role="region" aria-label="Aviso: modelo de demonstração">
+  <div class="demo-banner-copy"><span class="demo-banner-label">MODELO DEMONSTRATIVO</span><span>Marca, endereço, preços, avaliações e condições são ilustrativos.</span></div>
+  <div class="demo-banner-actions"><a href="../modelos.html">← Voltar à galeria</a><a class="demo-banner-cta" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20padaria%20e%20confeitaria%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Quero um site assim ↗</a></div>
+</div>
+
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Principal">
+      <a class="logo" href="#">Forno &amp; Farinha</a>
+      <div class="links">
+        <a href="#vitrine">Vitrine</a>
+        <a href="#encomendas">Encomendas</a>
+        <a href="#historia">Nossa história</a>
+        <a href="#visite">Como chegar</a>
+      </div>
+      <a class="btn sm" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20padaria%20e%20confeitaria%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Pedir no WhatsApp</a>
+    </nav>
+    <div class="hero">
+      <div>
+        <h1>Pão quente toda hora do dia.</h1>
+        <p class="lead">Fermentação lenta, manteiga de verdade e bolos feitos sob medida para a sua mesa. Aberto de segunda a domingo.</p>
+        <div class="acoes">
+          <a class="btn" href="#encomendas">Encomendar um bolo</a>
+          <a class="btn ghost" href="#vitrine">Ver a vitrine</a>
+        </div>
+      </div>
+      <aside class="forno" aria-label="Horários das fornadas de hoje">
+        <h3>Saindo do forno hoje</h3>
+        <small>Chegue na hora e leve ainda quente.</small>
+        <ul id="fornadas">
+          <li data-h="6"><time>06:00</time><span>Pão francês e pão de sal</span><span class="tag">Próxima</span></li>
+          <li data-h="9.5"><time>09:30</time><span>Croissant e folhado de queijo</span><span class="tag">Próxima</span></li>
+          <li data-h="11.5"><time>11:30</time><span>Pão italiano e focaccia</span><span class="tag">Próxima</span></li>
+          <li data-h="15"><time>15:00</time><span>Pão de queijo e broa de milho</span><span class="tag">Próxima</span></li>
+          <li data-h="17.5"><time>17:30</time><span>Francês da tarde</span><span class="tag">Próxima</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="vitrine" id="vitrine">
+  <div class="wrap">
+    <div class="topo">
+      <h2>O que tem na vitrine</h2>
+      <p>Preços de exemplo. A vitrine muda conforme a fornada; pergunte no balcão o que acabou de sair.</p>
+    </div>
+    <div class="colunas">
+      <div>
+        <h3>Pães</h3>
+        <div class="item"><div><b>Pão francês</b><small>Unidade, casca fina e crocante</small></div><i></i><span class="p">R$ 0,95</span></div>
+        <div class="item"><div><b>Pão de fermentação natural</b><small>Broa de 700 g, 24 h de descanso</small></div><i></i><span class="p">R$ 24,00</span></div>
+        <div class="item"><div><b>Croissant de manteiga</b><small>Massa folhada em 27 camadas</small></div><i></i><span class="p">R$ 11,50</span></div>
+        <div class="item"><div><b>Pão de queijo</b><small>Porção com 10 unidades</small></div><i></i><span class="p">R$ 16,00</span></div>
+      </div>
+      <div>
+        <h3>Confeitaria</h3>
+        <div class="item"><div><b>Bolo de cenoura com brigadeiro</b><small>Fatia grande</small></div><i></i><span class="p">R$ 13,00</span></div>
+        <div class="item"><div><b>Torta de limão</b><small>Base amanteigada, merengue maçaricado</small></div><i></i><span class="p">R$ 16,50</span></div>
+        <div class="item"><div><b>Brigadeiro gourmet</b><small>Cacau 54%, caixa com 6</small></div><i></i><span class="p">R$ 24,00</span></div>
+        <div class="item"><div><b>Café coado + pão na chapa</b><small>Combo do balcão</small></div><i></i><span class="p">R$ 9,90</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="enc" id="encomendas">
+  <div class="wrap">
+    <div class="cab">
+      <h2>Bolos e doces feitos para a sua data</h2>
+      <p>Aniversário, casamento ou reunião de trabalho. Conte a data e o número de convidados, e mandamos o orçamento no mesmo dia.</p>
+    </div>
+    <div class="tipos">
+      <article class="tipo">
+        <h3>Bolo no pote</h3>
+        <p>Individual, ideal para lembrancinhas e coffee break. Mínimo de 20 unidades.</p>
+        <span class="pr">A partir de R$ 12 a unidade</span>
+        <a class="btn sm" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20padaria%20e%20confeitaria%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Pedir orçamento</a>
+      </article>
+      <article class="tipo">
+        <h3>Bolo de festa</h3>
+        <p>De 15 a 60 fatias, com recheio e cobertura à sua escolha. Topo personalizado incluso.</p>
+        <span class="pr">A partir de R$ 180</span>
+        <a class="btn sm" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20padaria%20e%20confeitaria%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Pedir orçamento</a>
+      </article>
+      <article class="tipo">
+        <h3>Mesa de doces</h3>
+        <p>Cento de salgados, doces finos e mini tortas montados e entregues no local.</p>
+        <span class="pr">A partir de R$ 650</span>
+        <a class="btn sm" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20padaria%20e%20confeitaria%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Pedir orçamento</a>
+      </article>
+    </div>
+    <p class="aviso">Encomendas com 3 dias de antecedência. Bolos de casamento, com 15 dias.</p>
+  </div>
+</section>
+
+<section id="historia">
+  <div class="wrap hist">
+    <div class="selo" role="img" aria-label="Desde 2009"><div><span>desde</span><br><strong>2009</strong><br><span>no mesmo endereço</span></div></div>
+    <div>
+      <h2>Feito pela mesma família, todo dia</h2>
+      <p>Começamos com um forno de lenha e uma receita de pão da avó Helena. Hoje são três fornos, 14 padeiros e confeiteiros, e a mesma regra: nada de massa pronta, nada de aditivo.</p>
+      <p>Compramos farinha de moinhos de Minas e ovos de granjas da região. A fermentação leva o tempo que precisar, e o pão só sai quando está pronto.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dep" aria-labelledby="dt">
+  <div class="wrap">
+    <h2 id="dt">Quem passa por aqui, volta</h2>
+    <div class="grid">
+      <blockquote>Encomendei o bolo de 15 anos da minha filha e chegou lindo e no horário. Todo mundo pediu a receita.
+        <footer>Camila R., cliente desde 2018</footer></blockquote>
+      <blockquote>O croissant das nove e meia é a minha pausa do dia. Não troco por nenhum outro da cidade.
+        <footer>Marcos T., vizinho da padaria</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="visita" id="visite">
+  <div class="wrap">
+    <h2>Venha tomar um café</h2>
+    <div class="grid">
+      <table class="hr" aria-label="Horário de funcionamento">
+        <tr><td>Segunda a sexta</td><td>06:00 às 20:00</td></tr>
+        <tr><td>Sábado</td><td>06:00 às 20:00</td></tr>
+        <tr><td>Domingo e feriados</td><td>07:00 às 13:00</td></tr>
+      </table>
+      <div>
+        <address>
+          <strong>Forno &amp; Farinha</strong><br>
+          Rua das Acácias, 128, Centro<br>
+          Belo Horizonte, MG<br>
+          (31) 9XXXX-XXXX
+        </address>
+        <div class="acoes">
+          <a class="btn" href="https://wa.me/5531984180609?text=Ol%C3%A1%21%20Vi%20a%20demonstra%C3%A7%C3%A3o%20de%20site%20para%20padaria%20e%20confeitaria%20e%20quero%20conversar%20sobre%20um%20site%20parecido%20para%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+          <a class="btn ghost" href="https://maps.google.com/?q=Belo+Horizonte" target="_blank" rel="noopener">Abrir no mapa</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="rod">
+  <div class="wrap"><span>© 2026 Forno &amp; Farinha. Todos os direitos reservados.</span><span>Modelo de demonstração</span></div>
+</footer>
+
+<script>
+// Destaca a próxima fornada conforme o horário do visitante
+(function(){
+  var lis=document.querySelectorAll('#fornadas li');
+  var d=new Date(), now=d.getHours()+d.getMinutes()/60, achou=false;
+  lis.forEach(function(li){
+    var h=parseFloat(li.dataset.h);
+    if(h<now){li.classList.add('fim')}
+    else if(!achou){li.classList.add('prox');achou=true}
+  });
+  if(!achou){lis[0].classList.remove('fim');lis[0].classList.add('prox')}
+})();
+</script>
+</body>
+</html>

@@ -21,15 +21,19 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" as="image" href="assets/images/technology-hub.webp">
-  <link rel="preload" as="image" href="assets/images/gestao.webp">
+  <link rel="preload" as="image" href="assets/video/hero-poster.jpg">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ronaldo J. | Tecnologia em movimento">
   <meta property="og:description" content="Robótica, automação, redes, apps, sites e câmeras conectadas para transformar problemas técnicos em operações mais inteligentes.">
   <meta property="og:url" content="https://ronaldotecnologia.com.br/">
-  <meta property="og:image" content="https://ronaldotecnologia.com.br/assets/images/technology-hub.webp">
+  <meta property="og:image" content="https://ronaldotecnologia.com.br/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Ronaldo Tecnologia">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"ProfessionalService","name":"Ronaldo Tecnologia","alternateName":"Ronaldo J.","url":"https://ronaldotecnologia.com.br/","image":"https://ronaldotecnologia.com.br/assets/images/logo.png","email":"ronaldo@ronaldotecnologia.com.br","telephone":"+55-31-98418-0609","address":{"@type":"PostalAddress","addressLocality":"Belo Horizonte","addressRegion":"MG","addressCountry":"BR"},"areaServed":"BR","description":"Robótica, automação de sistemas, análise autorizada de redes, investigações técnicas, executáveis, apps, sites e automação de câmeras com alertas em WhatsApp, Telegram e Discord."}
@@ -46,14 +50,15 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="index.html" aria-label="Ronaldo Tecnologia - Início">
-        <span class="brand-logo-wrap"><img src="assets/images/logo-small.png" width="296" height="88" alt="Ronaldo Tecnologia"></span>
-        <span class="brand-meta"><strong>RONALDO.J</strong><small>tecnologia em movimento</small></span>
+        <span class="brand-logo-wrap"><img src="assets/images/logo-light.png" width="480" height="120" alt="Ronaldo Tecnologia"></span>
+        
       </a>
       <button class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
       <nav class="nav-links" aria-label="Navegação principal">
         <a class="active" href="index.html">Início</a>
         <a href="servicos.html">Serviços</a><a href="modelos.html">Modelos</a>
         <a href="index.html#planos">Planos</a>
+        <a href="index.html#radar">Radar</a>
         <a href="torge.html">Sistema Torge</a>
         <a href="implantacao.html">Implantação</a>
         <a href="sobre.html">Sobre</a>
@@ -75,9 +80,9 @@
             <a class="btn btn-secondary" href="#servicos">Explorar soluções</a>
           </div>
           <div class="hero-meta" aria-label="Resumo da Ronaldo Tecnologia">
-            <div class="metric"><strong>07+</strong><span>frentes técnicas conectadas</span></div>
-            <div class="metric"><strong>24/7</strong><span>ideias prontas para automatizar</span></div>
-            <div class="metric"><strong>BR</strong><span>atendimento remoto e direto</span></div>
+            <div class="metric"><strong>08</strong><span>frentes de atuação técnica</span></div>
+            <div class="metric"><strong>1:1</strong><span>atendimento direto com o Ronaldo</span></div>
+            <div class="metric"><strong>BR</strong><span>projetos remotos em todo o país</span></div>
           </div>
           <div class="hero-quicklinks" aria-label="Áreas de atuação">
             <span class="chip">robótica</span>
@@ -88,17 +93,20 @@
         </div>
         <div class="hero-media reveal" data-tilt>
           <div class="media-frame">
-            <img src="assets/images/technology-hub.webp" width="1254" height="1254" alt="Painel visual de tecnologia, automações e indicadores" fetchpriority="high">
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg" aria-label="Animação de um robô cercado por órbitas de luz, representando automação">
+              <source src="assets/video/hero-loop.mp4" type="video/mp4">
+            </video>
             <div class="media-topline"><span>RT / CORE 01</span><span>operação ativa</span></div>
             <span class="media-orbit" aria-hidden="true"></span>
             <div class="media-caption">
               <strong>Conecte o que hoje está solto.</strong>
               <span>Fluxos, sinais, dados e alertas em uma experiência técnica com linguagem simples.</span>
             </div>
-            <div class="floating-dashboard" aria-hidden="true">
-              <div class="dashboard-top"><span>Índice de operação</span><strong>+42%</strong></div>
-              <div class="dashboard-bars"><span></span><span></span><span></span></div>
-            </div>
+            <a class="floating-dashboard radar-badge" href="#radar">
+              <span class="radar-badge-dot" aria-hidden="true"></span>
+              <span><small>Novo · beta</small><strong>R1tech Radar</strong></span>
+              <span class="radar-badge-arrow" aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
       </div>
@@ -201,6 +209,49 @@
       </div>
     </section>
 
+    <section class="section section-radar" id="radar">
+      <div class="container radar-grid">
+        <div class="radar-copy reveal">
+          <span class="eyebrow eyebrow-signal">Novo · R1tech Radar</span>
+          <h2>Encontre clientes que ainda não estão na internet.</h2>
+          <p>O R1tech Radar varre o Google Maps pelo nicho e pela cidade que você escolher, separa as empresas que ainda não têm site e organiza tudo num CRM simples: quem foi encontrado, quem já foi contatado e em que etapa cada lead está.</p>
+          <ul class="radar-list">
+            <li><strong>Captação por nicho e cidade</strong><span>Escolha o segmento e a região, sem planilha e sem busca manual.</span></li>
+            <li><strong>CRM de leads</strong><span>Histórico, etapas e exportação em CSV para acompanhar cada oportunidade.</span></li>
+            <li><strong>Contato responsável</strong><span>Limite diário, horário comercial e opção de saída para quem não quer receber mensagens.</span></li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5531984180609?text=Ol%C3%A1!%20Quero%20acesso%20ao%20beta%20do%20R1tech%20Radar." target="_blank" rel="noopener">Quero acesso ao beta <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-secondary" href="https://radar.ronaldotecnologia.com.br/" target="_blank" rel="noopener">Já tenho conta</a>
+          </div>
+        </div>
+        <div class="radar-panel reveal" aria-hidden="true">
+          <div class="radar-panel-top"><span>radar.ronaldotecnologia.com.br</span><span class="radar-live">captação</span></div>
+          <div class="radar-scope"><span class="radar-sweep"></span><i style="--x:28%;--y:34%"></i><i style="--x:66%;--y:26%"></i><i style="--x:58%;--y:68%"></i><i style="--x:34%;--y:72%"></i><i style="--x:78%;--y:52%"></i></div>
+          <div class="radar-rows">
+            <div><span>Padaria · Belo Horizonte</span><em class="tag-new">novo lead</em></div>
+            <div><span>Borracharia · Contagem</span><em class="tag-talk">em conversa</em></div>
+            <div><span>Salão · Betim</span><em class="tag-won">fechado</em></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-reel" id="em-movimento">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Tecnologia em movimento</span>
+          <h2>Ideias que saem da tela e viram operação.</h2>
+        </div>
+        <figure class="reel reveal">
+          <video controls playsinline preload="none" poster="assets/video/showreel-poster.jpg">
+            <source src="assets/video/showreel.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+    </section>
+
+
     <section class="section" aria-label="Modelos de sites para negócios locais">
       <div class="container"><div class="cta-panel reveal"><div><span class="eyebrow">Para quem empreende</span><h2>Do balcão pra internet: uma ideia de site para cada tipo de negócio.</h2><p>Padaria, borracharia, loja, salão ou outro comércio local — explore alguns exemplos e imagine o seu.</p></div><a class="btn btn-primary" href="modelos.html">Explorar modelos <span aria-hidden="true">↗</span></a></div></div>
     </section>
@@ -276,7 +327,7 @@
           <a class="btn btn-secondary" href="contato.html">Falar sobre meu cenário</a>
         </div>
         <div class="split-media reveal" data-tilt>
-          <img src="assets/images/technology-hub.webp" width="1254" height="1254" alt="Tecnologia aplicada com dashboards e automações" loading="lazy" decoding="async">
+          <img src="assets/images/hub-mesa.webp" width="1600" height="900" alt="Tecnologia aplicada com dashboards e automações" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -299,7 +350,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="index.html" aria-label="Ronaldo Tecnologia - Início"><span class="brand-logo-wrap"><img src="assets/images/logo-small.png" width="296" height="88" alt="Ronaldo Tecnologia"></span><span class="brand-meta"><strong>RONALDO.J</strong><small>tecnologia em movimento</small></span></a>
+          <a class="brand" href="index.html" aria-label="Ronaldo Tecnologia - Início"><span class="brand-logo-wrap"><img src="assets/images/logo-light.png" width="480" height="120" alt="Ronaldo Tecnologia"></span></a>
           <p>Robótica, automação, redes, apps, sites e câmeras conectadas para transformar problemas técnicos em operações mais inteligentes.</p>
         </div>
         <div>

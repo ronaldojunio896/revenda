@@ -100,6 +100,13 @@
       ];
 
       const message = encodeURIComponent(lines.join("\n"));
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "conversion", {
+          send_to: "AW-18499819518/APzqCImov5QdEP6vs_VE",
+          value: 1.0,
+          currency: "BRL"
+        });
+      }
       window.open(`https://wa.me/${phone}?text=${message}`, "_blank", "noopener");
     });
   }

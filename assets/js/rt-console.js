@@ -555,7 +555,7 @@
       <a class="brand" href="index.html" aria-label="Ronaldo Tecnologia - Início"><span class="brand-logo-wrap"><img src="assets/images/logo-small.png" width="296" height="88" alt="Ronaldo Tecnologia"></span></a>
       <button class="menu-btn" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
       <nav class="nav-links" aria-label="Navegação principal">
-        <a href="index.html">Início</a><a href="servicos.html">Serviços</a><a href="index.html#planos">Planos</a><a href="torge.html">Sistema Torge</a><a href="implantacao.html">Implantação</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a>
+        <a href="index.html">Início</a><a href="servicos.html">Serviços</a><a href="implantacao.html">Implantação</a><a href="sobre.html">Sobre</a><a href="contato.html">Contato</a>
       </nav>
     </div>
   </header>

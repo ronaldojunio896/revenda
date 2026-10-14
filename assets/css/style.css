@@ -165,7 +165,7 @@ textarea {
   z-index: 100;
   border-bottom: 1px solid rgba(195, 224, 255, 0.1);
   background: rgba(7, 10, 18, 0.74);
-  backdrop-filter: blur(22px) saturate(140%);
+  backdrop-filter: blur(10px) saturate(120%);
 }
 
 .nav {
@@ -1350,25 +1350,23 @@ textarea {
 
 .js .reveal {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 700ms cubic-bezier(0.2, 0.75, 0.2, 1), transform 700ms cubic-bezier(0.2, 0.75, 0.2, 1);
+  transition: opacity 240ms ease;
 }
 
 .js .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .js .reveal:nth-child(2) {
-  transition-delay: 70ms;
+  transition-delay: 40ms;
 }
 
 .js .reveal:nth-child(3) {
-  transition-delay: 140ms;
+  transition-delay: 80ms;
 }
 
 .js .reveal:nth-child(4) {
-  transition-delay: 210ms;
+  transition-delay: 120ms;
 }
 
 @keyframes signal-pulse {
@@ -2113,5 +2111,19 @@ h1, h2, h3,
 @media (prefers-reduced-motion: reduce) {
   .hero.hero-immersive .hero-video {
     visibility: hidden;
+  }
+}
+
+
+/* Mobile and touch: prefer a static poster and a solid header for smooth scrolling. */
+@media (max-width: 820px) {
+  .site-header {
+    background: rgba(7, 10, 18, 0.96);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .hero.hero-immersive .hero-video {
+    display: none;
   }
 }

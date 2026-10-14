@@ -70,7 +70,36 @@
     revealNodes.forEach((node) => node.classList.add("is-visible"));
   }
 
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const heroVideo = document.querySelector(".hero-video");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isSmallOrTouchScreen = window.matchMedia("(max-width: 820px), (hover: none)").matches;
+
+  if (heroVideo) {
+    let heroIsVisible = false;
+    const syncHeroPlayback = () => {
+      if (prefersReducedMotion || isSmallOrTouchScreen || document.hidden || !heroIsVisible) {
+        heroVideo.pause();
+        return;
+      }
+
+      const playback = heroVideo.play();
+      if (playback && typeof playback.catch === "function") playback.catch(() => {});
+    };
+
+    if (!prefersReducedMotion && !isSmallOrTouchScreen && "IntersectionObserver" in window) {
+      const videoObserver = new IntersectionObserver((entries) => {
+        heroIsVisible = entries.some((entry) => entry.isIntersecting);
+        syncHeroPlayback();
+      }, { threshold: 0 });
+
+      videoObserver.observe(heroVideo.closest(".hero") || heroVideo);
+      document.addEventListener("visibilitychange", syncHeroPlayback);
+    } else {
+      heroVideo.pause();
+    }
+  }
+
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     document.querySelectorAll("[data-tilt]").forEach((card) => {
       card.addEventListener("pointermove", (event) => {
         const bounds = card.getBoundingClientRect();
